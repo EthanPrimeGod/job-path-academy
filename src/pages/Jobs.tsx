@@ -113,8 +113,7 @@ const Jobs = () => {
       {/* Hero Section */}
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/20" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-subtle" />
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center animate-fade-in py-32">
@@ -123,8 +122,12 @@ const Jobs = () => {
               New opportunities added daily
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-light tracking-tight mb-4 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">
-            Explore AI Annotation Jobs
+          <h1 className="text-5xl md:text-6xl font-light tracking-tight mb-4">
+            Explore AI Annotation Jobs.
+            <br />
+            <span className="bg-gradient-primary bg-clip-text text-transparent font-medium">
+              Find Your Next Project.
+            </span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Browse current opportunities and find your next project in shaping
