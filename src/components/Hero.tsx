@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-abstract.jpg";
 
 export const Hero = () => {
@@ -29,8 +30,8 @@ export const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button variant="hero" size="lg">
-            Find Jobs
+          <Button variant="hero" size="lg" asChild>
+            <Link to="/jobs">Find Jobs</Link>
           </Button>
           <Button variant="glass" size="lg">
             Post Jobs

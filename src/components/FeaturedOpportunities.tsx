@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const jobs = [
   {
@@ -62,8 +63,8 @@ export const FeaturedOpportunities = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="hero" size="lg">
-            View All Jobs
+          <Button variant="hero" size="lg" asChild>
+            <Link to="/jobs">View All Jobs</Link>
           </Button>
         </div>
       </div>
