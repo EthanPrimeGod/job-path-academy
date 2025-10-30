@@ -1,3 +1,4 @@
+import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { HowItWorks } from "@/components/HowItWorks";
 import { FeaturedOpportunities } from "@/components/FeaturedOpportunities";
@@ -11,6 +12,7 @@ import { Footer } from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background font-['Inter',sans-serif]">
+      <Navigation />
       <Hero />
       <HowItWorks />
       <FeaturedOpportunities />
