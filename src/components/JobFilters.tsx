@@ -146,41 +146,41 @@ export const JobFilters = ({
         {hasActiveFilters && (
           <div className="flex flex-wrap gap-2">
             {searchTerm && (
-              <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm flex items-center gap-2">
+              <span className="px-3 py-1 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 text-primary text-sm flex items-center gap-2 border border-primary/30">
                 Search: "{searchTerm}"
-                <button onClick={() => onSearchChange("")}>
+                <button onClick={() => onSearchChange("")} className="hover:text-primary/70 transition-colors">
                   <X className="w-3 h-3" />
                 </button>
               </span>
             )}
             {category !== "all" && (
-              <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm flex items-center gap-2">
+              <span className="px-3 py-1 rounded-full bg-gradient-to-r from-accent/20 to-primary/20 text-accent text-sm flex items-center gap-2 border border-accent/30">
                 {category}
-                <button onClick={() => onCategoryChange("all")}>
+                <button onClick={() => onCategoryChange("all")} className="hover:text-accent/70 transition-colors">
                   <X className="w-3 h-3" />
                 </button>
               </span>
             )}
             {experienceLevel !== "all" && (
-              <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm flex items-center gap-2">
+              <span className="px-3 py-1 rounded-full bg-gradient-to-r from-secondary/20 to-accent/20 text-secondary text-sm flex items-center gap-2 border border-secondary/30">
                 {experienceLevel}
-                <button onClick={() => onExperienceLevelChange("all")}>
+                <button onClick={() => onExperienceLevelChange("all")} className="hover:text-secondary/70 transition-colors">
                   <X className="w-3 h-3" />
                 </button>
               </span>
             )}
             {jobType !== "all" && (
-              <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm flex items-center gap-2">
+              <span className="px-3 py-1 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 text-primary text-sm flex items-center gap-2 border border-primary/30">
                 {jobType}
-                <button onClick={() => onJobTypeChange("all")}>
+                <button onClick={() => onJobTypeChange("all")} className="hover:text-primary/70 transition-colors">
                   <X className="w-3 h-3" />
                 </button>
               </span>
             )}
             {location !== "all" && (
-              <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm flex items-center gap-2">
+              <span className="px-3 py-1 rounded-full bg-gradient-to-r from-accent/20 to-secondary/20 text-accent text-sm flex items-center gap-2 border border-accent/30">
                 {location}
-                <button onClick={() => onLocationChange("all")}>
+                <button onClick={() => onLocationChange("all")} className="hover:text-accent/70 transition-colors">
                   <X className="w-3 h-3" />
                 </button>
               </span>

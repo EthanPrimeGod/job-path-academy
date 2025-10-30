@@ -32,8 +32,8 @@ export const JobDetailModal = ({ job, open, onOpenChange }: JobDetailModalProps)
               </DialogTitle>
               <p className="text-xl text-muted-foreground">{job.company}</p>
               {job.featured && (
-                <span className="inline-block mt-2 bg-gradient-primary text-white px-3 py-1 rounded-full text-xs font-medium">
-                  Featured
+                <span className="inline-block mt-2 bg-gradient-primary text-white px-3 py-1 rounded-full text-xs font-medium shadow-glow">
+                  ⭐ Featured
                 </span>
               )}
             </div>
@@ -65,14 +65,21 @@ export const JobDetailModal = ({ job, open, onOpenChange }: JobDetailModalProps)
           </div>
 
           <div className="flex flex-wrap gap-2 mb-6">
-            {job.tags.map((tag, i) => (
-              <span
-                key={i}
-                className="px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-medium"
-              >
-                {tag}
-              </span>
-            ))}
+            {job.tags.map((tag, i) => {
+              const colors = [
+                "bg-gradient-to-r from-primary/20 to-primary/10 text-primary border border-primary/30",
+                "bg-gradient-to-r from-secondary/20 to-secondary/10 text-secondary border border-secondary/30",
+                "bg-gradient-to-r from-accent/20 to-accent/10 text-accent border border-accent/30"
+              ];
+              return (
+                <span
+                  key={i}
+                  className={`px-3 py-1 rounded-full text-xs font-medium ${colors[i % colors.length]}`}
+                >
+                  {tag}
+                </span>
+              );
+            })}
           </div>
         </DialogHeader>
 
@@ -115,7 +122,7 @@ export const JobDetailModal = ({ job, open, onOpenChange }: JobDetailModalProps)
           <Button
             variant="hero"
             size="lg"
-            className="flex-1"
+            className="flex-1 bg-gradient-primary hover:opacity-90 transition-opacity shadow-glow"
             asChild
           >
             <a
