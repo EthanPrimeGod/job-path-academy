@@ -9,15 +9,15 @@ export const CTA = () => {
             Start Earning.
             <br />
             <span className="bg-gradient-primary bg-clip-text text-transparent font-medium">
-              Start Building.
+              Start Growing.
             </span>
           </h2>
           
           <p className="text-muted-foreground text-lg mb-10 max-w-2xl mx-auto">
-            Join the future of AI annotation work today
+            Join Annota — the job board designed for the next generation of AI professionals
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <Button variant="hero" size="lg">
               Browse Jobs
             </Button>
@@ -25,6 +25,10 @@ export const CTA = () => {
               Post a Job
             </Button>
           </div>
+
+          <p className="text-sm text-muted-foreground/60 font-light">
+            Join the hive. Build the future of AI.
+          </p>
         </div>
       </div>
     </section>

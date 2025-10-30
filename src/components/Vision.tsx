@@ -18,16 +18,13 @@ export const Vision = () => {
           Beyond Jobs
         </h2>
         
-        <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+        <div className="text-lg text-muted-foreground leading-relaxed mb-12">
           <p>
-            Annota Academy is our growing collection of interactive micro-learning modules designed to help annotators gain specialized skills over time.
-          </p>
-          <p>
-            Build expertise through hands-on training, earn micro-credentials, and unlock new opportunities in the evolving world of AI annotation.
+            Annota Academy is our upcoming platform for interactive micro-learning — helping annotators expand their expertise, earn credentials, and stay competitive.
           </p>
         </div>
 
-        <div className="mt-12 inline-flex px-8 py-3 rounded-full bg-card/40 backdrop-blur-glass border border-border/50 text-sm text-muted-foreground">
+        <div className="inline-flex px-8 py-3 rounded-full bg-card/40 backdrop-blur-glass border border-border/50 text-sm text-muted-foreground">
           Coming Soon
         </div>
       </div>

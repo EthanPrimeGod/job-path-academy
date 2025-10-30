@@ -3,18 +3,18 @@ import { UserPlus, FileCheck, DollarSign } from "lucide-react";
 const steps = [
   {
     icon: UserPlus,
-    title: "Create Account",
-    description: "Set up your profile and showcase your annotation skills",
+    title: "Create an Account",
+    description: "Sign up to explore job listings and start honing your skills",
   },
   {
     icon: FileCheck,
-    title: "Apply to Projects",
-    description: "Browse opportunities from leading AI companies",
+    title: "Browse Jobs",
+    description: "Discover open roles and projects that match your experience and interests",
   },
   {
     icon: DollarSign,
-    title: "Get Paid",
-    description: "Complete work and receive consistent, reliable payment",
+    title: "Connect & Apply",
+    description: "Apply directly through each company's site or contact form to begin your journey",
   },
 ];
 
@@ -27,7 +27,7 @@ export const HowItWorks = () => {
             How It Works
           </h2>
           <p className="text-muted-foreground text-lg">
-            Three simple steps to start your journey
+            Three simple steps to get started on Annota
           </p>
         </div>
 
