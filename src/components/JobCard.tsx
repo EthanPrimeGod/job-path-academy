@@ -16,7 +16,7 @@ export const JobCard = ({ job, onClick, index }: JobCardProps) => {
       style={{ animationDelay: `${index * 100}ms` }}
     >
       {job.featured && (
-        <div className="absolute top-4 right-4 bg-gradient-primary text-white px-3 py-1 rounded-full text-xs font-medium shadow-glow animate-pulse">
+        <div className="absolute top-4 right-4 bg-primary/10 text-primary border border-primary/30 px-3 py-1 rounded-full text-xs font-medium">
           ⭐ Featured
         </div>
       )}
@@ -53,21 +53,14 @@ export const JobCard = ({ job, onClick, index }: JobCardProps) => {
       </p>
 
       <div className="flex flex-wrap gap-2 mb-4">
-        {job.tags.slice(0, 3).map((tag, i) => {
-          const colors = [
-            "bg-primary/10 text-primary border border-primary/20",
-            "bg-secondary/10 text-secondary border border-secondary/20",
-            "bg-accent/10 text-accent border border-accent/20"
-          ];
-          return (
-            <span
-              key={i}
-              className={`px-3 py-1 rounded-full text-xs font-medium ${colors[i % colors.length]}`}
-            >
-              {tag}
-            </span>
-          );
-        })}
+        {job.tags.slice(0, 3).map((tag, i) => (
+          <span
+            key={i}
+            className="px-3 py-1 rounded-full text-xs font-medium bg-muted/50 text-muted-foreground border border-border/50 group-hover:border-primary/30 group-hover:text-primary transition-colors"
+          >
+            {tag}
+          </span>
+        ))}
         {job.tags.length > 3 && (
           <span className="px-3 py-1 rounded-full bg-gradient-accent text-muted-foreground text-xs font-medium border border-border/50">
             +{job.tags.length - 3} more

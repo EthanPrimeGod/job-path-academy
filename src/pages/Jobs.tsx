@@ -119,7 +119,7 @@ const Jobs = () => {
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center animate-fade-in py-32">
           <div className="inline-block mb-6">
-            <span className="px-4 py-2 rounded-full bg-gradient-primary text-white text-sm font-medium shadow-glow">
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/30 text-sm font-medium">
               New opportunities added daily
             </span>
           </div>
