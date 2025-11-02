@@ -7,7 +7,6 @@ import { JobDetailModal } from "@/components/JobDetailModal";
 import { jobs } from "@/data/jobs";
 import { Job } from "@/types/job";
 import { Search } from "lucide-react";
-import { HexagonPattern } from "@/components/HexagonPattern";
 import {
   Pagination,
   PaginationContent,
@@ -115,7 +114,6 @@ const Jobs = () => {
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-subtle" />
-          <HexagonPattern opacity={0.04} />
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center animate-fade-in py-32">

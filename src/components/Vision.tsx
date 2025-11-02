@@ -1,4 +1,4 @@
-import visionImage from "@/assets/vision-abstract.jpg";
+import visionImage from "@/assets/vision-hive.jpg";
 
 export const Vision = () => {
   return (

@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-abstract.jpg";
-import { HexagonPattern } from "@/components/HexagonPattern";
 
 export const Hero = () => {
   return (
@@ -14,13 +13,12 @@ export const Hero = () => {
           className="w-full h-full object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-subtle" />
-        <HexagonPattern opacity={0.04} />
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center animate-fade-in">
         <h1 className="text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-6">
-          Work Smarter.
+          Join the hive.
           <br />
           <span className="bg-gradient-primary bg-clip-text text-transparent font-medium">
             Build the Future of AI.
