@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-abstract.jpg";
+import { HexagonPattern } from "@/components/HexagonPattern";
 
 export const Hero = () => {
   return (
@@ -13,6 +14,7 @@ export const Hero = () => {
           className="w-full h-full object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-subtle" />
+        <HexagonPattern opacity={0.04} />
       </div>
 
       {/* Content */}

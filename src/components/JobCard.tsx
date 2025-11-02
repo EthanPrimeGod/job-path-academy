@@ -22,7 +22,7 @@ export const JobCard = ({ job, onClick, index }: JobCardProps) => {
       )}
 
       <div className="flex items-start gap-4 mb-4">
-        <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
+        <div className="w-12 h-12 bg-muted flex items-center justify-center flex-shrink-0 hexagon-clip">
           <Briefcase className="w-6 h-6 text-muted-foreground" />
         </div>
         <div className="flex-1 min-w-0">
