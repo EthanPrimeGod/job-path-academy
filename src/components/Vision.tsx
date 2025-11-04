@@ -2,6 +2,7 @@ import visionImage from "@/assets/vision-hive.jpg";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Image, Headphones, FileText, Box } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const modules = [
   {
@@ -98,8 +99,8 @@ export const Vision = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <Button size="lg" className="bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30">
-            Enter the Hive
+          <Button size="lg" className="bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30" asChild>
+            <Link to="/hive">Enter the Hive</Link>
           </Button>
         </div>
       </div>
