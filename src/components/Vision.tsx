@@ -63,7 +63,7 @@ export const Vision = () => {
           {modules.map((module, index) => (
             <div 
               key={module.title} 
-              className="group rounded-2xl bg-card/40 backdrop-blur-sm border border-border/50 shadow-soft hover:shadow-glow transition-all duration-500 animate-scale-in cursor-pointer"
+              className="group rounded-2xl bg-card backdrop-blur-sm border border-border shadow-soft hover:shadow-glow transition-all duration-500 animate-scale-in cursor-pointer"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <div className="p-8 pb-6">
