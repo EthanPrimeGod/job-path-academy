@@ -1,4 +1,4 @@
-import visionImage from "@/assets/vision-hive.jpg";
+import visionImage from "@/assets/hive-honey-flow.jpg";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Image, Headphones, FileText, Box } from "lucide-react";
@@ -37,14 +37,14 @@ const modules = [
 export const Vision = () => {
   return (
     <section className="py-32 px-6 relative overflow-hidden">
-      {/* Background with warm gradient */}
-      <div className="absolute inset-0 opacity-15">
+      {/* Background with liquid honey flow */}
+      <div className="absolute inset-0">
         <img 
           src={visionImage} 
           alt="" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-amber-500/5 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background/80" />
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
