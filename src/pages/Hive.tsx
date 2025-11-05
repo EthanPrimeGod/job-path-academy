@@ -294,52 +294,74 @@ const Hive = () => {
               {filteredModules.map((module, index) => (
                 <Link key={module.id} to={`/hive/${module.id}`}>
                   <Card 
-                    className="p-6 bg-card border-border hover:shadow-glow transition-all duration-500 animate-scale-in group cursor-pointer h-full relative"
+                    className="p-6 bg-card border-border hover:shadow-glow transition-all duration-500 animate-scale-in group cursor-pointer h-full relative overflow-hidden"
                     style={{ animationDelay: `${index * 100}ms` }}
                     data-state={module.state}
                   >
-                    {/* Completed Badge - Top Right */}
+                    {/* Completed Indicator - Subtle checkmark in corner */}
                     {isAuthenticated && module.state === "completed" && (
-                      <Badge className="absolute top-4 right-4 bg-green-500/10 text-green-500 border-green-500/20 text-xs">
-                        <Check className="w-3 h-3 mr-1" />
-                        Completed
-                      </Badge>
+                      <div className="absolute top-3 right-3 w-6 h-6 rounded-full bg-green-500/10 border border-green-500/20 flex items-center justify-center">
+                        <Check className="w-3.5 h-3.5 text-green-500" />
+                      </div>
                     )}
 
+                    {/* Icon */}
                     <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-4">
                       <module.icon className="w-6 h-6 text-primary" />
                     </div>
                     
-                    <div className="flex gap-2 mb-3 flex-wrap">
+                    {/* Category & Difficulty Badges */}
+                    <div className="flex gap-2 mb-3">
                       <Badge variant="outline" className="text-xs">
                         {module.category}
                       </Badge>
                       <Badge className={`text-xs border ${getDifficultyColor(module.difficulty)}`}>
                         {module.difficulty}
                       </Badge>
-                      {/* In Progress Chip */}
-                      {isAuthenticated && module.state === "in-progress" && module.progress && (
-                        <Badge variant="outline" className="text-xs">
-                          ● {module.progress.current}/{module.progress.total}
-                        </Badge>
-                      )}
                     </div>
 
+                    {/* Title */}
                     <h3 className="text-lg font-medium mb-2 group-hover:text-primary transition-colors">
                       {module.title}
                     </h3>
                     
-                    {/* Best Score for Completed */}
-                    {isAuthenticated && module.state === "completed" && module.bestScore && (
-                      <p className="text-xs text-muted-foreground mb-2">
-                        Best score: {module.bestScore}%
-                      </p>
+                    {/* Progress or Best Score */}
+                    {isAuthenticated && (
+                      <>
+                        {module.state === "in-progress" && module.progress && (
+                          <div className="mb-3">
+                            <div className="flex items-center justify-between text-xs text-muted-foreground mb-1.5">
+                              <span>Progress</span>
+                              <span className="font-medium">{module.progress.current}/{module.progress.total}</span>
+                            </div>
+                            <div className="w-full h-1.5 bg-secondary rounded-full overflow-hidden">
+                              <div 
+                                className="h-full bg-primary rounded-full transition-all duration-300"
+                                style={{ width: `${(module.progress.current / module.progress.total) * 100}%` }}
+                              />
+                            </div>
+                          </div>
+                        )}
+                        {module.state === "completed" && module.bestScore && (
+                          <div className="mb-3 flex items-center gap-2">
+                            <div className="flex-1 h-1.5 bg-green-500/10 rounded-full overflow-hidden">
+                              <div 
+                                className="h-full bg-green-500/40 rounded-full"
+                                style={{ width: `${module.bestScore}%` }}
+                              />
+                            </div>
+                            <span className="text-xs font-medium text-green-500">{module.bestScore}%</span>
+                          </div>
+                        )}
+                      </>
                     )}
                     
+                    {/* Description */}
                     <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                       {module.description}
                     </p>
 
+                    {/* XP */}
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-1 text-primary text-sm">
                         <Star className="w-4 h-4" />
@@ -347,6 +369,7 @@ const Hive = () => {
                       </div>
                     </div>
 
+                    {/* Action Button */}
                     <Button 
                       variant={module.state === "completed" ? "outline" : "outline"} 
                       className={module.state === "completed" ? "w-full opacity-80" : "w-full"} 
