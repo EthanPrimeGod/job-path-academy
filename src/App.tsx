@@ -9,6 +9,7 @@ import Hive from "./pages/Hive";
 import HiveLeaderboards from "./pages/HiveLeaderboards";
 import HiveModuleDetail from "./pages/HiveModuleDetail";
 import HiveModulePractice from "./pages/HiveModulePractice";
+import Auth from "./pages/Auth";
 import Account from "./pages/Account";
 import AccountOverview from "./pages/AccountOverview";
 import AccountHive from "./pages/AccountHive";
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/hive/leaderboards" element={<HiveLeaderboards />} />
           <Route path="/hive/:moduleId" element={<HiveModuleDetail />} />
           <Route path="/hive/:moduleId/start" element={<HiveModulePractice />} />
+          <Route path="/auth" element={<Auth />} />
           <Route path="/account" element={<Account />}>
             <Route index element={<AccountOverview />} />
             <Route path="hive" element={<AccountHive />} />
