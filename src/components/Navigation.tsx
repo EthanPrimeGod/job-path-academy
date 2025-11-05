@@ -10,7 +10,7 @@ export const Navigation = () => {
 
   const navLinks = [
     { label: "Jobs", href: "/jobs", active: true },
-    { label: "Academy", href: "#", active: false, comingSoon: true },
+    { label: "Hive", href: "/hive", active: true },
     { label: "Blog", href: "#", active: true },
     { label: "About", href: "#", active: true },
   ];
@@ -32,33 +32,23 @@ export const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <div key={link.label} className="relative">
-                {link.comingSoon && (
-                  <span className="absolute -top-2 left-1/2 transform -translate-x-1/2 text-xs text-primary bg-primary/10 px-2 py-0.5 rounded-full whitespace-nowrap">
-                    Coming Soon
-                  </span>
-                )}
-                {link.active && link.href.startsWith('/') ? (
-                  <Link
-                    to={link.href}
-                    className="text-sm font-medium transition-colors text-foreground hover:text-primary"
-                  >
-                    {link.label}
-                  </Link>
-                ) : (
-                  <a
-                    href={link.href}
-                    className={`text-sm font-medium transition-colors ${
-                      link.active
-                        ? "text-foreground hover:text-primary"
-                        : "text-muted-foreground/50 cursor-not-allowed"
-                    }`}
-                    onClick={(e) => !link.active && e.preventDefault()}
-                  >
-                    {link.label}
-                  </a>
-                )}
-              </div>
+              link.href.startsWith('/') ? (
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  className="text-sm font-medium transition-colors text-foreground hover:text-primary"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-sm font-medium transition-colors text-foreground hover:text-primary"
+                >
+                  {link.label}
+                </a>
+              )
             ))}
           </div>
 
@@ -82,37 +72,25 @@ export const Navigation = () => {
             <SheetContent side="right" className="w-[280px]">
               <div className="flex flex-col gap-6 mt-8">
                 {navLinks.map((link) => (
-                  <div key={link.label} className="relative">
-                    {link.comingSoon && (
-                      <span className="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded-full mb-1 inline-block">
-                        Coming Soon
-                      </span>
-                    )}
-                    {link.active && link.href.startsWith('/') ? (
-                      <Link
-                        to={link.href}
-                        className="block text-base font-medium transition-colors text-foreground hover:text-primary"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {link.label}
-                      </Link>
-                    ) : (
-                      <a
-                        href={link.href}
-                        className={`block text-base font-medium transition-colors ${
-                          link.active
-                            ? "text-foreground hover:text-primary"
-                            : "text-muted-foreground/50 cursor-not-allowed"
-                        }`}
-                        onClick={(e) => {
-                          if (!link.active) e.preventDefault();
-                          else setIsOpen(false);
-                        }}
-                      >
-                        {link.label}
-                      </a>
-                    )}
-                  </div>
+                  link.href.startsWith('/') ? (
+                    <Link
+                      key={link.label}
+                      to={link.href}
+                      className="block text-base font-medium transition-colors text-foreground hover:text-primary"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      className="block text-base font-medium transition-colors text-foreground hover:text-primary"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {link.label}
+                    </a>
+                  )
                 ))}
                 <div className="flex flex-col gap-3 pt-4 border-t border-border/50">
                   <Button variant="ghost" className="w-full justify-start">
