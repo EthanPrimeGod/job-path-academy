@@ -1,7 +1,8 @@
-import visionImage from "@/assets/hive-honey-flow.jpg";
+import visionImage from "@/assets/vision-hive.jpg";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Image, Headphones, FileText, Box } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const modules = [
   {
@@ -37,14 +38,14 @@ const modules = [
 export const Vision = () => {
   return (
     <section className="py-32 px-6 relative overflow-hidden">
-      {/* Background with liquid honey flow */}
-      <div className="absolute inset-0">
+      {/* Background with warm gradient */}
+      <div className="absolute inset-0 opacity-15">
         <img 
           src={visionImage} 
           alt="" 
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-amber-500/5 to-background" />
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
@@ -98,8 +99,8 @@ export const Vision = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <Button size="lg" className="bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30">
-            Enter the Hive
+          <Button size="lg" className="bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30" asChild>
+            <Link to="/hive">Enter the Hive</Link>
           </Button>
         </div>
       </div>
