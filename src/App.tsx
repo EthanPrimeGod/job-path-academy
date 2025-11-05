@@ -8,6 +8,7 @@ import Jobs from "./pages/Jobs";
 import Hive from "./pages/Hive";
 import HiveLeaderboards from "./pages/HiveLeaderboards";
 import HiveModuleDetail from "./pages/HiveModuleDetail";
+import HiveModulePractice from "./pages/HiveModulePractice";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/hive" element={<Hive />} />
           <Route path="/hive/leaderboards" element={<HiveLeaderboards />} />
           <Route path="/hive/:moduleId" element={<HiveModuleDetail />} />
+          <Route path="/hive/:moduleId/start" element={<HiveModulePractice />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
