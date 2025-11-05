@@ -17,6 +17,7 @@ const topAnnotators = [
 
 const modules = [
   {
+    id: "bounding-boxes-101",
     title: "Bounding Boxes 101",
     category: "Computer Vision",
     description: "Master the fundamentals of accurate object detection through precise bounding box annotation.",
@@ -26,6 +27,7 @@ const modules = [
     type: "core"
   },
   {
+    id: "sentiment-analysis",
     title: "Sentiment Analysis",
     category: "NLP",
     description: "Train your ability to identify emotional tone and classify text sentiment across contexts.",
@@ -35,6 +37,7 @@ const modules = [
     type: "core"
   },
   {
+    id: "audio-classification",
     title: "Audio Classification",
     category: "Audio",
     description: "Develop expertise in categorizing and tagging various sound types and audio patterns.",
@@ -44,6 +47,7 @@ const modules = [
     type: "core"
   },
   {
+    id: "video-frame-tagging",
     title: "Video Frame Tagging",
     category: "Video",
     description: "Learn to annotate temporal sequences and identify key moments in video content.",
@@ -53,6 +57,7 @@ const modules = [
     type: "company"
   },
   {
+    id: "semantic-segmentation",
     title: "Semantic Segmentation",
     category: "Computer Vision",
     description: "Practice pixel-level classification for detailed image understanding and object isolation.",
@@ -62,6 +67,7 @@ const modules = [
     type: "core"
   },
   {
+    id: "entity-recognition",
     title: "Entity Recognition",
     category: "NLP",
     description: "Sharpen your skills in identifying and classifying named entities in text data.",
@@ -71,6 +77,7 @@ const modules = [
     type: "company"
   },
   {
+    id: "speech-transcription",
     title: "Speech Transcription",
     category: "Audio",
     description: "Perfect your accuracy in converting spoken language to written text with proper formatting.",
@@ -80,6 +87,7 @@ const modules = [
     type: "core"
   },
   {
+    id: "action-recognition",
     title: "Action Recognition",
     category: "Video",
     description: "Train to identify and label human actions and movements in video sequences.",
@@ -207,43 +215,44 @@ const Hive = () => {
           {/* Module Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {modules.map((module, index) => (
-              <Card 
-                key={module.title}
-                className="p-6 bg-card border-border hover:shadow-glow transition-all duration-500 animate-scale-in group cursor-pointer"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-4">
-                  <module.icon className="w-6 h-6 text-primary" />
-                </div>
-                
-                <div className="flex gap-2 mb-3">
-                  <Badge variant="outline" className="text-xs">
-                    {module.category}
-                  </Badge>
-                  <Badge className={`text-xs border ${getDifficultyColor(module.difficulty)}`}>
-                    {module.difficulty}
-                  </Badge>
-                </div>
-
-                <h3 className="text-lg font-medium mb-2 group-hover:text-primary transition-colors">
-                  {module.title}
-                </h3>
-                
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  {module.description}
-                </p>
-
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-1 text-primary text-sm">
-                    <Star className="w-4 h-4" />
-                    <span className="font-medium">{module.xp} XP</span>
+              <Link key={module.id} to={`/hive/${module.id}`}>
+                <Card 
+                  className="p-6 bg-card border-border hover:shadow-glow transition-all duration-500 animate-scale-in group cursor-pointer h-full"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-4">
+                    <module.icon className="w-6 h-6 text-primary" />
                   </div>
-                </div>
+                  
+                  <div className="flex gap-2 mb-3">
+                    <Badge variant="outline" className="text-xs">
+                      {module.category}
+                    </Badge>
+                    <Badge className={`text-xs border ${getDifficultyColor(module.difficulty)}`}>
+                      {module.difficulty}
+                    </Badge>
+                  </div>
 
-                <Button variant="outline" className="w-full" size="sm">
-                  Start Module
-                </Button>
-              </Card>
+                  <h3 className="text-lg font-medium mb-2 group-hover:text-primary transition-colors">
+                    {module.title}
+                  </h3>
+                  
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                    {module.description}
+                  </p>
+
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-1 text-primary text-sm">
+                      <Star className="w-4 h-4" />
+                      <span className="font-medium">{module.xp} XP</span>
+                    </div>
+                  </div>
+
+                  <Button variant="outline" className="w-full" size="sm">
+                    View Details
+                  </Button>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
