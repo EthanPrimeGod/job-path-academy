@@ -16,6 +16,17 @@ import AccountHive from "./pages/AccountHive";
 import AccountJobs from "./pages/AccountJobs";
 import AccountSettings from "./pages/AccountSettings";
 import NotFound from "./pages/NotFound";
+import CompanyOverview from "./pages/company/CompanyOverview";
+import CompanyJobs from "./pages/company/CompanyJobs";
+import CompanyJobDetail from "./pages/company/CompanyJobDetail";
+import CompanyApplicants from "./pages/company/CompanyApplicants";
+import CompanyApplicantDetail from "./pages/company/CompanyApplicantDetail";
+import CompanyMessages from "./pages/company/CompanyMessages";
+import CompanyModules from "./pages/company/CompanyModules";
+import CompanyModuleDetail from "./pages/company/CompanyModuleDetail";
+import CompanyBilling from "./pages/company/CompanyBilling";
+import CompanyTeam from "./pages/company/CompanyTeam";
+import CompanySettings from "./pages/company/CompanySettings";
 
 const queryClient = new QueryClient();
 
@@ -37,8 +48,20 @@ const App = () => (
             <Route index element={<AccountOverview />} />
             <Route path="hive" element={<AccountHive />} />
             <Route path="jobs" element={<AccountJobs />} />
-            <Route path="settings" element={<AccountSettings />} />
+          <Route path="settings" element={<AccountSettings />} />
           </Route>
+          <Route path="/company" element={<CompanyOverview />} />
+          <Route path="/company/jobs" element={<CompanyJobs />} />
+          <Route path="/company/jobs/:jobId" element={<CompanyJobDetail />} />
+          <Route path="/company/jobs/:jobId/applicants/:applicantId" element={<CompanyApplicantDetail />} />
+          <Route path="/company/applicants" element={<CompanyApplicants />} />
+          <Route path="/company/messages" element={<CompanyMessages />} />
+          <Route path="/company/messages/:threadId" element={<CompanyMessages />} />
+          <Route path="/company/modules" element={<CompanyModules />} />
+          <Route path="/company/modules/:moduleId" element={<CompanyModuleDetail />} />
+          <Route path="/company/billing" element={<CompanyBilling />} />
+          <Route path="/company/team" element={<CompanyTeam />} />
+          <Route path="/company/settings" element={<CompanySettings />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
