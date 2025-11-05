@@ -182,9 +182,11 @@ const Hive = () => {
           </div>
 
           <div className="text-center">
-            <Button variant="outline" size="lg">
-              View Full Leaderboard →
-            </Button>
+            <Link to="/hive/leaderboards">
+              <Button variant="outline" size="lg">
+                View Full Leaderboard →
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
