@@ -1,4 +1,4 @@
-import visionImage from "@/assets/vision-hive.jpg";
+import visionImage from "@/assets/hive-honey-flow.jpg";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Image, Headphones, FileText, Box } from "lucide-react";
@@ -39,7 +39,7 @@ export const Vision = () => {
   return (
     <section className="py-32 px-6 relative overflow-hidden">
       {/* Background with warm gradient */}
-      <div className="absolute inset-0 opacity-15">
+      <div className="absolute inset-0 opacity-20">
         <img 
           src={visionImage} 
           alt="" 
