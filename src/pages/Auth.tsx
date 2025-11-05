@@ -198,10 +198,10 @@ const Auth = () => {
 
           <CardContent className="space-y-6">
             {/* Mode Toggle */}
-            <div className="flex gap-2 p-1 bg-muted/50 rounded-lg border border-border/50">
+            <div className="flex gap-2 p-1 bg-muted/30 rounded-lg">
               <Button
                 type="button"
-                variant={mode === "signin" ? "secondary" : "ghost"}
+                variant={mode === "signin" ? "outline" : "ghost"}
                 className="flex-1"
                 onClick={() => setMode("signin")}
               >
@@ -209,7 +209,7 @@ const Auth = () => {
               </Button>
               <Button
                 type="button"
-                variant={mode === "signup" ? "secondary" : "ghost"}
+                variant={mode === "signup" ? "outline" : "ghost"}
                 className="flex-1"
                 onClick={() => setMode("signup")}
               >
@@ -255,7 +255,7 @@ const Auth = () => {
                   )}
                 </div>
 
-                <Button type="submit" className="w-full" variant="secondary" disabled={isLoading}>
+                <Button type="submit" className="w-full" variant="outline" disabled={isLoading}>
                   {isLoading ? "Signing in..." : "Sign In"}
                 </Button>
 
@@ -302,10 +302,10 @@ const Auth = () => {
                 {/* Role Toggle */}
                 <div className="space-y-2">
                   <Label>Account Type</Label>
-                  <div className="flex gap-2 p-1 bg-muted/50 rounded-lg border border-border/50">
+                  <div className="flex gap-2 p-1 bg-muted/30 rounded-lg">
                     <Button
                       type="button"
-                      variant={role === "annotator" ? "secondary" : "ghost"}
+                      variant={role === "annotator" ? "outline" : "ghost"}
                       size="sm"
                       className="flex-1"
                       onClick={() => setRole("annotator")}
@@ -314,7 +314,7 @@ const Auth = () => {
                     </Button>
                     <Button
                       type="button"
-                      variant={role === "company" ? "secondary" : "ghost"}
+                      variant={role === "company" ? "outline" : "ghost"}
                       size="sm"
                       className="flex-1"
                       onClick={() => setRole("company")}
@@ -455,7 +455,7 @@ const Auth = () => {
                     <Button
                       type="submit"
                       className="w-full"
-                      variant="secondary"
+                      variant="outline"
                       disabled={isLoading || !signUpAnnotatorForm.watch("agreeToTerms")}
                     >
                       {isLoading ? "Creating account..." : "Create Account"}
@@ -605,7 +605,7 @@ const Auth = () => {
                     <Button
                       type="submit"
                       className="w-full"
-                      variant="secondary"
+                      variant="outline"
                       disabled={isLoading || !signUpCompanyForm.watch("agreeToTerms")}
                     >
                       {isLoading ? "Creating account..." : "Create Account"}
