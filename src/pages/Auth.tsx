@@ -187,8 +187,8 @@ const Auth = () => {
     <div className="min-h-screen bg-background flex flex-col">
       <Navigation />
       
-      <main className="flex-1 flex items-center justify-center px-4 py-12">
-        <Card className="w-full max-w-[560px] shadow-elegant">
+      <main className="flex-1 flex items-center justify-center px-4 py-12 bg-gradient-subtle">
+        <Card className="w-full max-w-[560px] shadow-soft border-border/50 bg-card/80 backdrop-blur-glass">
           <CardHeader className="text-center space-y-2">
             <CardTitle className="text-3xl font-bold">Welcome to Annota</CardTitle>
             <CardDescription>
@@ -198,10 +198,10 @@ const Auth = () => {
 
           <CardContent className="space-y-6">
             {/* Mode Toggle */}
-            <div className="flex gap-2 p-1 bg-muted rounded-lg">
+            <div className="flex gap-2 p-1 bg-muted/50 rounded-lg border border-border/50">
               <Button
                 type="button"
-                variant={mode === "signin" ? "default" : "ghost"}
+                variant={mode === "signin" ? "secondary" : "ghost"}
                 className="flex-1"
                 onClick={() => setMode("signin")}
               >
@@ -209,7 +209,7 @@ const Auth = () => {
               </Button>
               <Button
                 type="button"
-                variant={mode === "signup" ? "default" : "ghost"}
+                variant={mode === "signup" ? "secondary" : "ghost"}
                 className="flex-1"
                 onClick={() => setMode("signup")}
               >
@@ -255,7 +255,7 @@ const Auth = () => {
                   )}
                 </div>
 
-                <Button type="submit" className="w-full" disabled={isLoading}>
+                <Button type="submit" className="w-full" variant="secondary" disabled={isLoading}>
                   {isLoading ? "Signing in..." : "Sign In"}
                 </Button>
 
@@ -302,10 +302,10 @@ const Auth = () => {
                 {/* Role Toggle */}
                 <div className="space-y-2">
                   <Label>Account Type</Label>
-                  <div className="flex gap-2 p-1 bg-muted rounded-lg">
+                  <div className="flex gap-2 p-1 bg-muted/50 rounded-lg border border-border/50">
                     <Button
                       type="button"
-                      variant={role === "annotator" ? "default" : "ghost"}
+                      variant={role === "annotator" ? "secondary" : "ghost"}
                       size="sm"
                       className="flex-1"
                       onClick={() => setRole("annotator")}
@@ -314,7 +314,7 @@ const Auth = () => {
                     </Button>
                     <Button
                       type="button"
-                      variant={role === "company" ? "default" : "ghost"}
+                      variant={role === "company" ? "secondary" : "ghost"}
                       size="sm"
                       className="flex-1"
                       onClick={() => setRole("company")}
@@ -455,6 +455,7 @@ const Auth = () => {
                     <Button
                       type="submit"
                       className="w-full"
+                      variant="secondary"
                       disabled={isLoading || !signUpAnnotatorForm.watch("agreeToTerms")}
                     >
                       {isLoading ? "Creating account..." : "Create Account"}
@@ -604,6 +605,7 @@ const Auth = () => {
                     <Button
                       type="submit"
                       className="w-full"
+                      variant="secondary"
                       disabled={isLoading || !signUpCompanyForm.watch("agreeToTerms")}
                     >
                       {isLoading ? "Creating account..." : "Create Account"}
