@@ -1,27 +1,569 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Annota - Build the Future of AI</title>
-    <meta name="description" content="Connect skilled data annotators with companies shaping tomorrow's technology. Find meaningful work or hire expert talent." />
-    <meta name="author" content="Annota" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annota - Join the Hive. Build the Future of AI.</title>
+    <meta name="description" content="Connect skilled data annotators with companies shaping tomorrow's technology. Find meaningful work or hire expert talent.">
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <a href="/" class="logo-link">
+                    <img src="src/assets/annota-logo.png" alt="Annota" class="logo-img">
+                    <span class="logo-text">Annota</span>
+                </a>
 
-    <meta property="og:title" content="Annota - Build the Future of AI" />
-    <meta property="og:description" content="Connect skilled data annotators with companies shaping tomorrow's technology." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+                <!-- Desktop Navigation -->
+                <div class="nav-links">
+                    <a href="/jobs.html" class="nav-link">Jobs</a>
+                    <a href="/hive.html" class="nav-link">Hive</a>
+                    <a href="#" class="nav-link">Blog</a>
+                    <a href="#" class="nav-link">About</a>
+                </div>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+                <!-- Auth Buttons -->
+                <div class="nav-auth">
+                    <button class="btn btn-ghost">Sign In</button>
+                    <button class="btn btn-primary">Sign Up</button>
+                </div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Background -->
+        <div class="hero-bg">
+            <img src="src/assets/hero-abstract.jpg" alt="" class="hero-bg-img">
+            <div class="hero-bg-overlay"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Join the hive.
+                <br>
+                <span class="hero-title-gradient">Build the Future of AI.</span>
+            </h1>
+
+            <p class="hero-description">
+                Annota connects skilled annotators with companies shaping tomorrow's technology.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="/jobs.html" class="btn btn-hero">Find Jobs</a>
+                <button class="btn btn-glass">Post Jobs</button>
+            </div>
+        </div>
+
+        <!-- Bottom fade -->
+        <div class="hero-fade"></div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-description">Three simple steps to get started on Annota</p>
+            </div>
+
+            <div class="grid grid-3">
+                <!-- Step 1 -->
+                <div class="card card-hover" style="animation-delay: 0ms">
+                    <div class="step-number">1</div>
+                    <div class="icon-box icon-accent">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <line x1="19" y1="8" x2="19" y2="14"></line>
+                            <line x1="22" y1="11" x2="16" y2="11"></line>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Create an Account</h3>
+                    <p class="card-description">Sign up to explore job listings and start honing your skills</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="card card-hover" style="animation-delay: 150ms">
+                    <div class="step-number">2</div>
+                    <div class="icon-box icon-accent">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Browse Jobs</h3>
+                    <p class="card-description">Discover open roles and projects that match your experience and interests</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="card card-hover" style="animation-delay: 300ms">
+                    <div class="step-number">3</div>
+                    <div class="icon-box icon-accent">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Connect & Apply</h3>
+                    <p class="card-description">Apply directly through each company's site or contact form to begin your journey</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Opportunities Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Opportunities</h2>
+                <p class="section-description">Explore real AI annotation jobs available on our platform</p>
+            </div>
+
+            <div class="grid grid-3">
+                <!-- Job 1 -->
+                <div class="card card-hover" style="animation-delay: 0ms">
+                    <h3 class="job-title">Image Tagging for Retail AI</h3>
+
+                    <div class="job-meta">
+                        <div class="job-meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>TechVision AI</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>Remote Contract</span>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-outline btn-full">View Listing</button>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="card card-hover" style="animation-delay: 150ms">
+                    <h3 class="job-title">Chatbot Data Reviewer</h3>
+
+                    <div class="job-meta">
+                        <div class="job-meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>ConversaAI</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>Flexible Hours</span>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-outline btn-full">View Listing</button>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="card card-hover" style="animation-delay: 300ms">
+                    <h3 class="job-title">Audio Labeling for Speech Recognition</h3>
+
+                    <div class="job-meta">
+                        <div class="job-meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>VoiceWorks</span>
+                        </div>
+                        <div class="job-meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>Entry-Level</span>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-outline btn-full">View Listing</button>
+                </div>
+            </div>
+
+            <div class="section-cta">
+                <a href="/jobs.html" class="btn btn-hero btn-lg">View All Jobs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Annotators Section -->
+    <section class="section section-accent">
+        <div class="section-bg-accent"></div>
+
+        <div class="container relative">
+            <div class="section-header">
+                <h2 class="section-title">Why Annotators Choose Annota</h2>
+                <p class="section-description">A transparent, accessible platform built for everyone — from newcomers to experienced professionals</p>
+            </div>
+
+            <div class="grid grid-3">
+                <!-- Feature 1 -->
+                <div class="card card-hover" style="animation-delay: 0ms">
+                    <div class="icon-box icon-accent">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Low Barrier to Entry</h3>
+                    <p class="card-description">Skip long tests and complicated onboarding. Start browsing opportunities right away</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="card card-hover" style="animation-delay: 100ms">
+                    <div class="icon-box icon-accent">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                            <polyline points="17 6 23 6 23 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Skill Growth Support</h3>
+                    <p class="card-description">Leverage your existing experience or sharpen your skills through our learning content</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="card card-hover" style="animation-delay: 200ms">
+                    <div class="icon-box icon-accent">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Ongoing Insights & Resources</h3>
+                    <p class="card-description">Our blog features guides, project spotlights, and annotation tips</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="card card-hover" style="animation-delay: 300ms">
+                    <div class="icon-box icon-accent">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Built for Everyone</h3>
+                    <p class="card-description">Find jobs suited to your experience level — whether you're new or advanced</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="card card-hover" style="animation-delay: 400ms">
+                    <div class="icon-box icon-accent">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
+                            <path d="M8.5 8.5v.01"></path>
+                            <path d="M16 15.5v.01"></path>
+                            <path d="M12 12v.01"></path>
+                            <path d="M11 17v.01"></path>
+                            <path d="M7 14v.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Evolving Ecosystem</h3>
+                    <p class="card-description">Annota Academy (coming soon) will help you learn, test, and grow through interactive modules</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Companies Section -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2 gap-large align-center">
+                <!-- Left content -->
+                <div class="space-y">
+                    <div>
+                        <h2 class="section-title text-left">For Companies</h2>
+                        <p class="section-description text-left mb-8">
+                            Hire skilled annotators fast. Build high-quality datasets with a trusted network of professionals ready to scale with your needs.
+                        </p>
+                        <button class="btn btn-outline btn-lg">Start Hiring</button>
+                    </div>
+                </div>
+
+                <!-- Right features -->
+                <div class="space-y-sm">
+                    <!-- Feature 1 -->
+                    <div class="card-horizontal" style="animation-delay: 0ms">
+                        <div class="icon-box-sm icon-accent">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="card-title-sm">Vetted Talent</h3>
+                            <p class="card-description-sm">Access pre-screened annotators with verified skills</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="card-horizontal" style="animation-delay: 100ms">
+                        <div class="icon-box-sm icon-accent">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="card-title-sm">Scalable Teams</h3>
+                            <p class="card-description-sm">Grow your annotation workforce on demand</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="card-horizontal" style="animation-delay: 200ms">
+                        <div class="icon-box-sm icon-accent">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="card-title-sm">Fast Deployment</h3>
+                            <p class="card-description-sm">Start projects quickly with streamlined onboarding</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights Blog Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Insights & Resources</h2>
+                <p class="section-description">Stay inspired and informed with guides, spotlights, and annotation best practices</p>
+            </div>
+
+            <div class="grid grid-3">
+                <!-- Article 1 -->
+                <div class="blog-card" style="animation-delay: 0ms">
+                    <div class="blog-image">
+                        <img src="src/assets/blog-breaking-into-ai.jpg" alt="Breaking Into AI Annotation">
+                        <div class="blog-image-overlay"></div>
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title">Breaking Into AI Annotation</h3>
+                        <p class="blog-description">Everything you need to know to start your career in data annotation</p>
+                        <div class="blog-link">
+                            Read More
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="blog-card" style="animation-delay: 150ms">
+                    <div class="blog-image">
+                        <img src="src/assets/blog-labeling-pro.jpg" alt="How to Label Data Like a Pro">
+                        <div class="blog-image-overlay"></div>
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title">How to Label Data Like a Pro</h3>
+                        <p class="blog-description">Best practices and techniques from experienced annotators</p>
+                        <div class="blog-link">
+                            Read More
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="blog-card" style="animation-delay: 300ms">
+                    <div class="blog-image">
+                        <img src="src/assets/blog-life-annotator.jpg" alt="Behind the Scenes: Life as an Annotator">
+                        <div class="blog-image-overlay"></div>
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title">Behind the Scenes: Life as an Annotator</h3>
+                        <p class="blog-description">Real stories from professionals shaping the future of AI</p>
+                        <div class="blog-link">
+                            Read More
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-cta">
+                <button class="btn btn-outline btn-lg">Visit Blog</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Hive Section -->
+    <section class="section section-hive">
+        <!-- Background -->
+        <div class="hive-bg">
+            <img src="src/assets/hive-honey-flow.jpg" alt="">
+            <div class="hive-bg-overlay"></div>
+        </div>
+
+        <div class="container relative">
+            <div class="section-header">
+                <h2 class="section-title">The Hive</h2>
+                <p class="section-description">Where skills take shape.</p>
+            </div>
+
+            <div class="grid grid-4">
+                <!-- Module 1 -->
+                <div class="hive-card" style="animation-delay: 0ms">
+                    <div class="hive-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                    <div class="hive-badge">Computer Vision</div>
+                    <h3 class="hive-title">Image Segmentation</h3>
+                    <p class="hive-description">Master pixel-perfect boundaries by practicing object isolation and semantic segmentation on real-world imagery.</p>
+                    <div class="hive-exercises">12 exercises</div>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="hive-card" style="animation-delay: 150ms">
+                    <div class="hive-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                        </svg>
+                    </div>
+                    <div class="hive-badge">Audio</div>
+                    <h3 class="hive-title">Audio Tagging</h3>
+                    <p class="hive-description">Train your ear to identify and classify sounds, from environmental noise to speech patterns in audio data.</p>
+                    <div class="hive-exercises">8 exercises</div>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="hive-card" style="animation-delay: 300ms">
+                    <div class="hive-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="hive-badge">NLP</div>
+                    <h3 class="hive-title">Text Classification</h3>
+                    <p class="hive-description">Sharpen your ability to categorize, label, and understand nuances in natural language datasets.</p>
+                    <div class="hive-exercises">15 exercises</div>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="hive-card" style="animation-delay: 450ms">
+                    <div class="hive-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <div class="hive-badge">Computer Vision</div>
+                    <h3 class="hive-title">Bounding Box Precision</h3>
+                    <p class="hive-description">Refine your accuracy in drawing tight, consistent bounding boxes around objects of all shapes and sizes.</p>
+                    <div class="hive-exercises">10 exercises</div>
+                </div>
+            </div>
+
+            <div class="section-cta">
+                <a href="/hive.html" class="btn btn-hive btn-lg">Enter the Hive</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container-sm">
+            <div class="cta-box">
+                <h2 class="cta-title">
+                    Start Earning.
+                    <br>
+                    <span class="cta-title-gradient">Start Growing.</span>
+                </h2>
+
+                <p class="cta-description">
+                    Join Annota — the job board designed for the next generation of AI professionals
+                </p>
+
+                <div class="cta-buttons">
+                    <a href="/jobs.html" class="btn btn-hero btn-lg">Browse Jobs</a>
+                    <button class="btn btn-outline btn-lg">Post a Job</button>
+                </div>
+
+                <p class="cta-tagline">
+                    Join the hive. Build the future of AI.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Annota</div>
+
+                <div class="footer-links">
+                    <a href="#" class="footer-link">About</a>
+                    <a href="#" class="footer-link">Careers</a>
+                    <a href="#" class="footer-link">Privacy</a>
+                    <a href="#" class="footer-link">Terms</a>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                © 2025 Annota. Building the future of AI annotation.
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
