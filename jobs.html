@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Jobs - Annota</title>
+    <meta name="description" content="Explore AI annotation job opportunities and find your next project.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="/" class="logo-link">
+                    <img src="src/assets/annota-logo.png" alt="Annota" class="logo-img">
+                    <span class="logo-text">Annota</span>
+                </a>
+
+                <div class="nav-links">
+                    <a href="/jobs.html" class="nav-link">Jobs</a>
+                    <a href="/hive.html" class="nav-link">Hive</a>
+                    <a href="#" class="nav-link">Blog</a>
+                    <a href="#" class="nav-link">About</a>
+                </div>
+
+                <div class="nav-auth">
+                    <button class="btn btn-ghost">Sign In</button>
+                    <button class="btn btn-primary">Sign Up</button>
+                </div>
+
+                <button class="mobile-menu-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="jobs-hero">
+        <div class="jobs-hero-bg"></div>
+
+        <div class="jobs-hero-content">
+            <div class="jobs-hero-badge">
+                <span>New opportunities added daily</span>
+            </div>
+            <h1 class="jobs-hero-title">
+                Explore AI Annotation Jobs.
+                <br>
+                <span class="jobs-hero-title-gradient">Find Your Next Project.</span>
+            </h1>
+            <p class="jobs-hero-description">
+                Browse current opportunities and find your next project in shaping the future of AI
+            </p>
+        </div>
+
+        <div class="hero-fade"></div>
+    </section>
+
+    <!-- Filters -->
+    <div class="jobs-filters">
+        <div class="container">
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input type="text" id="searchInput" placeholder="Search by title, company, or keyword" class="search-input">
+                <button id="clearSearch" class="search-clear" style="display: none;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Filter Controls -->
+            <div class="filter-controls">
+                <select id="categoryFilter" class="filter-select">
+                    <option value="all">All Categories</option>
+                    <option value="Image & Video">Image & Video</option>
+                    <option value="Text & NLP">Text & NLP</option>
+                    <option value="Audio & Speech">Audio & Speech</option>
+                    <option value="3D & Spatial">3D & Spatial</option>
+                    <option value="Quality Assurance">Quality Assurance</option>
+                </select>
+
+                <select id="experienceFilter" class="filter-select">
+                    <option value="all">All Levels</option>
+                    <option value="Entry-level">Entry-level</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Expert">Expert</option>
+                </select>
+
+                <select id="typeFilter" class="filter-select">
+                    <option value="all">All Types</option>
+                    <option value="Full-time">Full-time</option>
+                    <option value="Part-time">Part-time</option>
+                    <option value="Contract">Contract</option>
+                    <option value="Freelance">Freelance</option>
+                </select>
+
+                <select id="locationFilter" class="filter-select">
+                    <option value="all">All Locations</option>
+                    <option value="Remote">Remote</option>
+                    <option value="Hybrid">Hybrid</option>
+                    <option value="On-site">On-site</option>
+                </select>
+
+                <select id="sortBy" class="filter-select">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                </select>
+
+                <button id="clearFilters" class="btn btn-ghost btn-sm" style="display: none; margin-left: auto;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                    Clear Filters
+                </button>
+            </div>
+
+            <!-- Active Filter Tags -->
+            <div id="activeFilters" class="active-filters" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- Job Listings -->
+    <section class="jobs-section">
+        <div class="container">
+            <p id="jobCount" class="job-count"></p>
+
+            <!-- Job Grid -->
+            <div id="jobGrid" class="job-grid"></div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <div class="empty-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </div>
+                <h3 class="empty-title">No jobs found</h3>
+                <p class="empty-description">
+                    Try adjusting your filters or search terms. New opportunities are added regularly.
+                </p>
+            </div>
+
+            <!-- Pagination -->
+            <div id="pagination" class="pagination"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Annota</div>
+
+                <div class="footer-links">
+                    <a href="#" class="footer-link">About</a>
+                    <a href="#" class="footer-link">Careers</a>
+                    <a href="#" class="footer-link">Privacy</a>
+                    <a href="#" class="footer-link">Terms</a>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                © 2025 Annota. Building the future of AI annotation.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Job Detail Modal -->
+    <div id="jobModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div id="modalBody" class="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="jobs.js"></script>
+</body>
+</html>
