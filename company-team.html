@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - Company Dashboard | Job Path Academy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav"><div class="container"><div class="nav-content"><a href="index.html" class="nav-logo">Job Path Academy</a><div class="nav-links"><a href="jobs.html" class="nav-link">Jobs</a><a href="hive.html" class="nav-link">The Hive</a><a href="index.html#for-companies" class="nav-link">For Companies</a><a href="auth.html" class="nav-link-cta">Sign In</a></div></div></div></nav>
+
+    <div class="company-layout">
+        <aside class="company-sidebar">
+            <div class="company-sidebar-header"><h2 class="company-sidebar-title">Company Dashboard</h2></div>
+            <nav class="company-sidebar-nav">
+                <a href="company-overview.html" class="company-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>Overview</a>
+                <a href="company-jobs.html" class="company-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>Jobs</a>
+                <a href="company-applicants.html" class="company-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>Applicants</a>
+                <a href="company-messages.html" class="company-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Messages</a>
+                <a href="company-modules.html" class="company-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>Modules</a>
+                <a href="company-billing.html" class="company-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>Billing</a>
+                <a href="company-team.html" class="company-sidebar-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path><circle cx="20" cy="10" r="3"></circle></svg>Team</a>
+                <a href="company-settings.html" class="company-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v6m0 6v6m8.66-10.66l-4.24 4.24m-4.24 4.24L7.34 20.66M23 12h-6m-6 0H1m19.66 7.34l-4.24-4.24m-4.24-4.24L7.34 3.34"></path></svg>Settings</a>
+            </nav>
+        </aside>
+
+        <main class="company-main">
+            <div class="company-content">
+                <div class="company-header"><h1 class="company-title">Team</h1><p class="company-description">Manage team members and their permissions</p></div>
+
+                <div class="company-card">
+                    <div style="padding: 0 1.5rem 1rem;"><div class="company-card-title">Invite Team Member</div><div class="company-card-description">Send an invitation to join your company account</div></div>
+                    <div style="padding: 0 1.5rem 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 240px;"><label style="display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">Email Address</label><input type="email" class="modal-input" placeholder="colleague@company.com"></div>
+                        <div style="width: 200px;"><label style="display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">Role</label><select class="modal-select"><option>Owner</option><option>Manager</option><option selected>Recruiter</option><option>Billing</option></select></div>
+                        <div style="display: flex; align-items: end;"><button class="company-btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px; margin-right: 0.5rem;"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="17" y1="11" x2="23" y2="11"></line><line x1="20" y1="8" x2="20" y2="14"></line></svg>Send Invite</button></div>
+                    </div>
+                </div>
+
+                <div class="company-card">
+                    <div style="padding: 0 1.5rem 1.5rem;"><div class="company-card-title">Team Members</div><div class="company-card-description">Manage roles and permissions for your team</div></div>
+                    <div class="company-table-wrapper">
+                        <table class="company-table">
+                            <thead><tr><th>Member</th><th>Email</th><th>Role</th><th></th></tr></thead>
+                            <tbody>
+                                <tr><td><div style="display: flex; align-items: center; gap: 0.75rem;"><div class="company-message-avatar" style="width: 32px; height: 32px; font-size: 0.75rem;">JD</div><span class="company-table-name">Jane Doe</span></div></td><td class="company-table-muted">jane.doe@company.com</td><td><select class="modal-select" style="width: 140px;" disabled><option selected>owner</option></select></td><td></td></tr>
+                                <tr><td><div style="display: flex; align-items: center; gap: 0.75rem;"><div class="company-message-avatar" style="width: 32px; height: 32px; font-size: 0.75rem;">JS</div><span class="company-table-name">John Smith</span></div></td><td class="company-table-muted">john.smith@company.com</td><td><select class="modal-select" style="width: 140px;"><option>owner</option><option selected>manager</option><option>recruiter</option><option>billing</option></select></td><td><button class="company-btn-ghost">Remove</button></td></tr>
+                                <tr><td><div style="display: flex; align-items: center; gap: 0.75rem;"><div class="company-message-avatar" style="width: 32px; height: 32px; font-size: 0.75rem;">AJ</div><span class="company-table-name">Alice Johnson</span></div></td><td class="company-table-muted">alice.j@company.com</td><td><select class="modal-select" style="width: 140px;"><option>owner</option><option>manager</option><option selected>recruiter</option><option>billing</option></select></td><td><button class="company-btn-ghost">Remove</button></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="company-card">
+                    <div style="padding: 0 1.5rem 1rem;"><div class="company-card-title">Role Permissions</div><div class="company-card-description">Understanding team member roles</div></div>
+                    <div style="padding: 0 1.5rem 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+                        <div style="padding: 1rem; background-color: rgba(255, 255, 255, 0.03); border-radius: 0.5rem;"><p style="font-weight: 500; margin-bottom: 0.25rem;">Owner</p><p style="font-size: 0.875rem; color: var(--muted-foreground);">Full access to all features including billing and team management</p></div>
+                        <div style="padding: 1rem; background-color: rgba(255, 255, 255, 0.03); border-radius: 0.5rem;"><p style="font-weight: 500; margin-bottom: 0.25rem;">Manager</p><p style="font-size: 0.875rem; color: var(--muted-foreground);">Can manage jobs, applicants, and modules. Cannot access billing</p></div>
+                        <div style="padding: 1rem; background-color: rgba(255, 255, 255, 0.03); border-radius: 0.5rem;"><p style="font-weight: 500; margin-bottom: 0.25rem;">Recruiter</p><p style="font-size: 0.875rem; color: var(--muted-foreground);">Can view and manage applicants, send messages. Limited job editing</p></div>
+                        <div style="padding: 1rem; background-color: rgba(255, 255, 255, 0.03); border-radius: 0.5rem;"><p style="font-weight: 500; margin-bottom: 0.25rem;">Billing</p><p style="font-size: 0.875rem; color: var(--muted-foreground);">Access to billing and invoices only. No hiring permissions</p></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer"><div class="container"><div class="footer-content"><div class="footer-section"><h3 class="footer-title">Job Path Academy</h3><p class="footer-description">Connecting skilled annotators with AI companies building the future.</p></div><div class="footer-section"><h4 class="footer-heading">For Annotators</h4><ul class="footer-links"><li><a href="jobs.html">Browse Jobs</a></li><li><a href="hive.html">The Hive</a></li><li><a href="auth.html">Sign Up</a></li></ul></div><div class="footer-section"><h4 class="footer-heading">For Companies</h4><ul class="footer-links"><li><a href="index.html#for-companies">Post a Job</a></li><li><a href="index.html#for-companies">Find Talent</a></li></ul></div><div class="footer-section"><h4 class="footer-heading">Company</h4><ul class="footer-links"><li><a href="index.html#about">About</a></li><li><a href="index.html#contact">Contact</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2024 Job Path Academy. All rights reserved.</p></div></div></footer>
+</body>
+</html>
