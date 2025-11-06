@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Account | Job Path Academy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-logo">
+                    Job Path Academy
+                </a>
+                <div class="nav-links">
+                    <a href="jobs.html" class="nav-link">Jobs</a>
+                    <a href="hive.html" class="nav-link">The Hive</a>
+                    <a href="index.html#for-companies" class="nav-link">For Companies</a>
+                    <a href="auth.html" class="nav-link-cta">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Account Container -->
+    <div class="account-container">
+        <div class="container">
+            <!-- Profile Header -->
+            <div class="account-header">
+                <div class="account-header-info">
+                    <div class="account-avatar">AC</div>
+                    <div class="account-header-text">
+                        <h1 class="account-user-name">Alex Chen</h1>
+                        <p class="account-user-handle">@alexchen</p>
+                    </div>
+                </div>
+
+                <!-- Stats Chips -->
+                <div class="account-stats-chips">
+                    <div class="account-stat-chip">
+                        <div class="account-stat-label">Total XP</div>
+                        <div class="account-stat-value">12,450</div>
+                    </div>
+                    <div class="account-stat-chip">
+                        <div class="account-stat-label">Global Rank</div>
+                        <div class="account-stat-value">#127</div>
+                    </div>
+                    <div class="account-stat-chip">
+                        <div class="account-stat-label">Modules Completed</div>
+                        <div class="account-stat-value">18</div>
+                    </div>
+                    <div class="account-stat-chip">
+                        <div class="account-stat-label">Member Since</div>
+                        <div class="account-stat-value">Jan 2024</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Account Tabs -->
+            <div class="account-tabs">
+                <a href="account-overview.html" class="account-tab">Overview</a>
+                <a href="account-hive.html" class="account-tab">Hive</a>
+                <a href="account-jobs.html" class="account-tab">Jobs</a>
+                <a href="account-settings.html" class="account-tab active">Settings</a>
+            </div>
+
+            <!-- Settings Content -->
+            <div class="account-content">
+                <div class="account-section">
+                    <h1 class="account-page-title">Settings</h1>
+                    <p class="account-page-description">Manage your account preferences and privacy</p>
+                </div>
+
+                <!-- Profile Settings Card -->
+                <div class="account-settings-card">
+                    <h2 class="account-settings-section-title">Profile Information</h2>
+                    <div class="account-settings-form">
+                        <div class="account-settings-field">
+                            <label for="display-name" class="account-settings-label">Display Name</label>
+                            <input type="text" id="display-name" class="account-settings-input" value="Alex Chen">
+                        </div>
+
+                        <div class="account-settings-field">
+                            <label for="handle" class="account-settings-label">Handle</label>
+                            <div class="account-settings-handle-wrapper">
+                                <span class="account-settings-handle-prefix">@</span>
+                                <input type="text" id="handle" class="account-settings-input" value="alexchen">
+                            </div>
+                        </div>
+
+                        <div class="account-settings-field">
+                            <label for="bio" class="account-settings-label">Bio</label>
+                            <textarea id="bio" class="account-settings-textarea" rows="3">AI annotator specializing in computer vision</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Privacy Settings Card -->
+                <div class="account-settings-card">
+                    <h2 class="account-settings-section-title">Privacy & Visibility</h2>
+                    <div class="account-settings-toggles">
+                        <div class="account-settings-toggle-item">
+                            <div class="account-settings-toggle-info">
+                                <label for="show-leaderboards" class="account-settings-toggle-label">Show on Global Leaderboards</label>
+                                <p class="account-settings-toggle-description">Display your rank and scores on public leaderboards</p>
+                            </div>
+                            <label class="account-toggle-switch">
+                                <input type="checkbox" id="show-leaderboards" checked>
+                                <span class="account-toggle-slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="account-settings-separator"></div>
+
+                        <div class="account-settings-toggle-item">
+                            <div class="account-settings-toggle-info">
+                                <label for="show-company-modules" class="account-settings-toggle-label">Show Company Module Results</label>
+                                <p class="account-settings-toggle-description">Allow companies to see your performance on their specific modules</p>
+                            </div>
+                            <label class="account-toggle-switch">
+                                <input type="checkbox" id="show-company-modules" checked>
+                                <span class="account-toggle-slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="account-settings-separator"></div>
+
+                        <div class="account-settings-toggle-item">
+                            <div class="account-settings-toggle-info">
+                                <label for="public-profile" class="account-settings-toggle-label">Public Profile</label>
+                                <p class="account-settings-toggle-description">Make your profile visible to other users and potential employers</p>
+                            </div>
+                            <label class="account-toggle-switch">
+                                <input type="checkbox" id="public-profile" checked>
+                                <span class="account-toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notifications Card -->
+                <div class="account-settings-card">
+                    <h2 class="account-settings-section-title">Notifications</h2>
+                    <div class="account-settings-toggles">
+                        <div class="account-settings-toggle-item">
+                            <div class="account-settings-toggle-info">
+                                <label for="email-notifications" class="account-settings-toggle-label">Email Notifications</label>
+                                <p class="account-settings-toggle-description">Receive updates about new jobs and achievements</p>
+                            </div>
+                            <label class="account-toggle-switch">
+                                <input type="checkbox" id="email-notifications" checked>
+                                <span class="account-toggle-slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="account-settings-separator"></div>
+
+                        <div class="account-settings-toggle-item">
+                            <div class="account-settings-toggle-info">
+                                <label for="weekly-summary" class="account-settings-toggle-label">Weekly Summary</label>
+                                <p class="account-settings-toggle-description">Get a weekly email with your progress and stats</p>
+                            </div>
+                            <label class="account-toggle-switch">
+                                <input type="checkbox" id="weekly-summary" checked>
+                                <span class="account-toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="account-settings-actions">
+                    <button class="account-settings-btn-cancel">Cancel</button>
+                    <button class="account-settings-btn-save">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Job Path Academy</h3>
+                    <p class="footer-description">Connecting skilled annotators with AI companies building the future.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">For Annotators</h4>
+                    <ul class="footer-links">
+                        <li><a href="jobs.html">Browse Jobs</a></li>
+                        <li><a href="hive.html">The Hive</a></li>
+                        <li><a href="auth.html">Sign Up</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">For Companies</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#for-companies">Post a Job</a></li>
+                        <li><a href="index.html#for-companies">Find Talent</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Job Path Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
