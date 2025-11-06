@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs - Company Dashboard | Job Path Academy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-logo">Job Path Academy</a>
+                <div class="nav-links">
+                    <a href="jobs.html" class="nav-link">Jobs</a>
+                    <a href="hive.html" class="nav-link">The Hive</a>
+                    <a href="index.html#for-companies" class="nav-link">For Companies</a>
+                    <a href="auth.html" class="nav-link-cta">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Company Layout -->
+    <div class="company-layout">
+        <!-- Sidebar (shared) -->
+        <aside class="company-sidebar">
+            <div class="company-sidebar-header">
+                <h2 class="company-sidebar-title">Company Dashboard</h2>
+            </div>
+            <nav class="company-sidebar-nav">
+                <a href="company-overview.html" class="company-sidebar-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    Overview
+                </a>
+                <a href="company-jobs.html" class="company-sidebar-link active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                    Jobs
+                </a>
+                <a href="company-applicants.html" class="company-sidebar-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    Applicants
+                </a>
+                <a href="company-messages.html" class="company-sidebar-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    Messages
+                </a>
+                <a href="company-modules.html" class="company-sidebar-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                    Modules
+                </a>
+                <a href="company-billing.html" class="company-sidebar-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                    Billing
+                </a>
+                <a href="company-team.html" class="company-sidebar-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path><circle cx="20" cy="10" r="3"></circle></svg>
+                    Team
+                </a>
+                <a href="company-settings.html" class="company-sidebar-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v6m0 6v6m8.66-10.66l-4.24 4.24m-4.24 4.24L7.34 20.66M23 12h-6m-6 0H1m19.66 7.34l-4.24-4.24m-4.24-4.24L7.34 3.34"></path></svg>
+                    Settings
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="company-main">
+            <div class="company-content">
+                <!-- Header -->
+                <div class="company-header-with-action">
+                    <div>
+                        <h1 class="company-title">Jobs</h1>
+                        <p class="company-description">Manage your job postings and view applicants</p>
+                    </div>
+                    <button class="company-btn-primary" id="openPostJobModal">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                        Post Job
+                    </button>
+                </div>
+
+                <!-- Filters Card -->
+                <div class="company-card">
+                    <div class="company-filters">
+                        <div class="company-search-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="company-search-icon">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                            <input type="text" id="searchInput" class="company-search-input" placeholder="Search jobs...">
+                        </div>
+                        <div class="company-filter-buttons">
+                            <button class="company-filter-btn active" data-filter="all">All</button>
+                            <button class="company-filter-btn" data-filter="open">Open</button>
+                            <button class="company-filter-btn" data-filter="closed">Closed</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Jobs Table -->
+                <div class="company-card">
+                    <div class="company-table-wrapper">
+                        <table class="company-table">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Status</th>
+                                    <th>Applicants</th>
+                                    <th>Created</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="jobsTableBody">
+                                <!-- Populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Post Job Modal -->
+    <div class="modal" id="postJobModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content modal-lg">
+            <div class="modal-header">
+                <h2 class="modal-title">Post New Job</h2>
+                <p class="modal-description">Create a new job posting for annotators</p>
+                <button class="modal-close" id="closePostJobModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-form">
+                    <div class="modal-field">
+                        <label class="modal-label">Job Title</label>
+                        <input type="text" class="modal-input" placeholder="e.g., Senior Data Annotator">
+                    </div>
+                    <div class="modal-field">
+                        <label class="modal-label">Description</label>
+                        <textarea class="modal-textarea" rows="6" placeholder="Describe the role and responsibilities..."></textarea>
+                    </div>
+                    <div class="modal-field-row">
+                        <div class="modal-field">
+                            <label class="modal-label">Employment Type</label>
+                            <select class="modal-select">
+                                <option value="">Select type</option>
+                                <option value="full-time">Full-time</option>
+                                <option value="part-time">Part-time</option>
+                                <option value="contract">Contract</option>
+                            </select>
+                        </div>
+                        <div class="modal-field">
+                            <label class="modal-label">Pay Range</label>
+                            <input type="text" class="modal-input" placeholder="e.g., $50,000 - $70,000">
+                        </div>
+                    </div>
+                    <div class="modal-field">
+                        <label class="modal-label">Location</label>
+                        <input type="text" class="modal-input" placeholder="e.g., Remote, San Francisco, Hybrid">
+                    </div>
+                    <div class="modal-field">
+                        <label class="modal-label">Tags (comma-separated)</label>
+                        <input type="text" class="modal-input" placeholder="e.g., Computer Vision, Remote, Full-time">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn-cancel" id="cancelPostJob">Cancel</button>
+                <button class="modal-btn-primary" id="submitPostJob">Post Job</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Job Path Academy</h3>
+                    <p class="footer-description">Connecting skilled annotators with AI companies building the future.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">For Annotators</h4>
+                    <ul class="footer-links">
+                        <li><a href="jobs.html">Browse Jobs</a></li>
+                        <li><a href="hive.html">The Hive</a></li>
+                        <li><a href="auth.html">Sign Up</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">For Companies</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#for-companies">Post a Job</a></li>
+                        <li><a href="index.html#for-companies">Find Talent</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Job Path Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="company-jobs.js"></script>
+</body>
+</html>

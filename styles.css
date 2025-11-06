@@ -5967,3 +5967,385 @@ a {
         padding: 0.5rem;
     }
 }
+
+/* Company Header with Action */
+.company-header-with-action {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.company-header-with-action .company-btn-primary svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.5rem;
+}
+
+/* Company Filters */
+.company-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.company-search-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.company-search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    color: var(--muted-foreground);
+    stroke-width: 2;
+}
+
+.company-search-input {
+    width: 100%;
+    padding: 0.5rem 0.75rem 0.5rem 2.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.375rem;
+    color: var(--foreground);
+    font-family: inherit;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.company-search-input:focus {
+    outline: none;
+    border-color: rgba(var(--primary-rgb), 0.5);
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+}
+
+.company-filter-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.company-filter-btn {
+    padding: 0.375rem 0.75rem;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.375rem;
+    color: var(--muted-foreground);
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.company-filter-btn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--foreground);
+}
+
+.company-filter-btn.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--foreground);
+}
+
+/* Company Tabs */
+.company-tabs {
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 1.5rem;
+}
+
+.company-tab {
+    padding: 0.75rem 1rem;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: var(--muted-foreground);
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.company-tab:hover {
+    color: var(--foreground);
+}
+
+.company-tab.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+.company-tab-panel {
+    display: none;
+}
+
+.company-tab-panel.active {
+    display: block;
+}
+
+/* Company Stats Grid */
+.company-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+}
+
+.company-stat-card {
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.company-stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.company-stat-label {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+}
+
+/* Company Danger Button */
+.company-btn-danger {
+    display: inline-block;
+    padding: 0.375rem 0.75rem;
+    background-color: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: 0.375rem;
+    color: rgb(239, 68, 68);
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.company-btn-danger:hover {
+    background-color: rgba(239, 68, 68, 0.2);
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 32rem;
+    max-height: 90vh;
+    background-color: var(--card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-lg {
+    max-width: 42rem;
+}
+
+.modal-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.modal-description {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: var(--muted-foreground);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+    color: var(--foreground);
+}
+
+.modal-body {
+    padding: 1.5rem;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.modal-field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.modal-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.modal-input,
+.modal-textarea,
+.modal-select {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.375rem;
+    color: var(--foreground);
+    font-family: inherit;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.modal-input:focus,
+.modal-textarea:focus,
+.modal-select:focus {
+    outline: none;
+    border-color: rgba(var(--primary-rgb), 0.5);
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+}
+
+.modal-textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.modal-select {
+    cursor: pointer;
+}
+
+.modal-footer {
+    padding: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+}
+
+.modal-btn-cancel {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.375rem;
+    color: var(--foreground);
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.modal-btn-cancel:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.modal-btn-primary {
+    padding: 0.5rem 1rem;
+    background: var(--gradient-primary);
+    border: none;
+    border-radius: 0.375rem;
+    color: var(--primary-foreground);
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.modal-btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-glow);
+}
+
+/* Responsive - Company Portal Additional */
+@media (max-width: 768px) {
+    .company-header-with-action {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .company-filters {
+        flex-direction: column;
+    }
+
+    .company-filter-buttons {
+        flex-wrap: wrap;
+    }
+
+    .company-stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .modal-field-row {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0.5rem;
+    }
+}
