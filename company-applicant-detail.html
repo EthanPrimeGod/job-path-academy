@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicant Details - Company Dashboard | Job Path Academy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav"><div class="container"><div class="nav-content"><a href="index.html" class="nav-logo">Job Path Academy</a><div class="nav-links"><a href="jobs.html" class="nav-link">Jobs</a><a href="hive.html" class="nav-link">The Hive</a><a href="index.html#for-companies" class="nav-link">For Companies</a><a href="auth.html" class="nav-link-cta">Sign In</a></div></div></div></nav>
+
+    <div class="company-layout">
+        <aside class="company-sidebar">
+            <div class="company-sidebar-header"><h2 class="company-sidebar-title">Company Dashboard</h2></div>
+            <nav class="company-sidebar-nav">
+                <a href="company-overview.html" class="company-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>Overview</a>
+                <a href="company-jobs.html" class="company-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>Jobs</a>
+                <a href="company-applicants.html" class="company-sidebar-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>Applicants</a>
+                <a href="company-messages.html" class="company-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Messages</a>
+                <a href="company-modules.html" class="company-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>Modules</a>
+                <a href="company-billing.html" class="company-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>Billing</a>
+                <a href="company-team.html" class="company-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path><circle cx="20" cy="10" r="3"></circle></svg>Team</a>
+                <a href="company-settings.html" class="company-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v6m0 6v6m8.66-10.66l-4.24 4.24m-4.24 4.24L7.34 20.66M23 12h-6m-6 0H1m19.66 7.34l-4.24-4.24m-4.24-4.24L7.34 3.34"></path></svg>Settings</a>
+            </nav>
+        </aside>
+
+        <main class="company-main">
+            <div class="company-content">
+                <a href="company-applicants.html" class="company-btn-ghost" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>Back to Applicants</a>
+
+                <div class="company-header-with-action">
+                    <div><h1 class="company-title">Sarah Chen</h1><p class="company-description">Senior Data Annotator - Computer Vision</p></div>
+                    <div style="display: flex; gap: 0.5rem;"><button class="company-btn-outline">Update Stage</button><button class="company-btn-primary">Send Message</button></div>
+                </div>
+
+                <div class="company-bottom-grid">
+                    <div class="company-card">
+                        <div style="padding: 0 1.5rem 1rem;"><div class="company-card-title">Applicant Details</div></div>
+                        <div style="padding: 0 1.5rem 1.5rem; display: grid; gap: 1.5rem;">
+                            <div><p style="font-size: 0.875rem; color: var(--muted-foreground); margin-bottom: 0.25rem;">Email</p><p>sarah.chen@email.com</p></div>
+                            <div><p style="font-size: 0.875rem; color: var(--muted-foreground); margin-bottom: 0.25rem;">Stage</p><span class="company-badge company-badge-purple">interview</span></div>
+                            <div><p style="font-size: 0.875rem; color: var(--muted-foreground); margin-bottom: 0.25rem;">Applied Date</p><p>2025-01-16</p></div>
+                            <div><p style="font-size: 0.875rem; color: var(--muted-foreground); margin-bottom: 0.25rem;">Hive Score</p><p style="font-weight: 600; color: var(--primary);">92%</p></div>
+                        </div>
+                    </div>
+
+                    <div class="company-card">
+                        <div style="padding: 0 1.5rem 1rem;"><div class="company-card-title">Cover Note</div></div>
+                        <div style="padding: 0 1.5rem 1.5rem;"><p style="font-size: 0.875rem; line-height: 1.6; color: var(--muted-foreground);">I have 4 years of experience in computer vision annotation, working with autonomous vehicle datasets...</p></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer"><div class="container"><div class="footer-content"><div class="footer-section"><h3 class="footer-title">Job Path Academy</h3><p class="footer-description">Connecting skilled annotators with AI companies building the future.</p></div><div class="footer-section"><h4 class="footer-heading">For Annotators</h4><ul class="footer-links"><li><a href="jobs.html">Browse Jobs</a></li><li><a href="hive.html">The Hive</a></li><li><a href="auth.html">Sign Up</a></li></ul></div><div class="footer-section"><h4 class="footer-heading">For Companies</h4><ul class="footer-links"><li><a href="index.html#for-companies">Post a Job</a></li><li><a href="index.html#for-companies">Find Talent</a></li></ul></div><div class="footer-section"><h4 class="footer-heading">Company</h4><ul class="footer-links"><li><a href="index.html#about">About</a></li><li><a href="index.html#contact">Contact</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2024 Job Path Academy. All rights reserved.</p></div></div></footer>
+</body>
+</html>
