@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module Details - The Hive | Job Path Academy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-logo">
+                    Job Path Academy
+                </a>
+                <div class="nav-links">
+                    <a href="jobs.html" class="nav-link">Jobs</a>
+                    <a href="hive.html" class="nav-link">The Hive</a>
+                    <a href="index.html#for-companies" class="nav-link">For Companies</a>
+                    <a href="auth.html" class="nav-link-cta">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Not Found State (hidden by default, shown by JS if module not found) -->
+    <div id="notFoundState" class="module-not-found" style="display: none;">
+        <div class="container">
+            <div class="module-not-found-content">
+                <h1 class="module-not-found-title">Module Not Found</h1>
+                <a href="hive.html" class="module-not-found-btn">← Return to The Hive</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content (hidden by default, shown by JS when module loads) -->
+    <div id="mainContent" style="display: none;">
+        <!-- Back Button -->
+        <div class="container" style="padding-top: 2rem;">
+            <a href="hive.html" class="module-back-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Back to The Hive
+            </a>
+        </div>
+
+        <!-- Header / Module Title Block -->
+        <section class="module-header">
+            <div class="container">
+                <div class="module-header-grid">
+                    <div class="module-header-content">
+                        <div id="moduleBadges" class="module-badges">
+                            <!-- Populated by JavaScript -->
+                        </div>
+
+                        <h1 id="moduleTitle" class="module-title"></h1>
+
+                        <p id="moduleLongDescription" class="module-description"></p>
+                    </div>
+
+                    <!-- Visual Element -->
+                    <div class="module-icon-wrapper">
+                        <div class="module-icon-card">
+                            <div id="moduleIconContainer" class="module-icon-svg">
+                                <!-- Populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module Overview Cards -->
+        <section class="module-overview">
+            <div class="container">
+                <h2 class="module-section-title">Module Overview</h2>
+
+                <div class="module-overview-grid">
+                    <div class="module-overview-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="module-overview-icon">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="6"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                        </svg>
+                        <div class="module-overview-label">Objective</div>
+                        <div id="moduleObjective" class="module-overview-value"></div>
+                    </div>
+
+                    <div class="module-overview-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="module-overview-icon">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <div class="module-overview-label">Duration</div>
+                        <div id="moduleDuration" class="module-overview-value"></div>
+                    </div>
+
+                    <div class="module-overview-card">
+                        <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="module-overview-icon">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <div class="module-overview-label">XP Reward</div>
+                        <div id="moduleXP" class="module-overview-value"></div>
+                    </div>
+
+                    <div class="module-overview-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="module-overview-icon">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        <div class="module-overview-label">Requirements</div>
+                        <div id="moduleRequirements" class="module-overview-value"></div>
+                    </div>
+                </div>
+
+                <!-- Completion Rate -->
+                <div class="module-completion-rate">
+                    <span id="moduleCompletionRate"></span>% of annotators complete this module
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Grid: Top Performers + Start Module -->
+        <section class="module-main-section">
+            <div class="container">
+                <div class="module-main-grid">
+
+                    <!-- Top Performers Widget -->
+                    <div class="module-sidebar">
+                        <div class="module-top-performers">
+                            <div class="module-top-performers-header">
+                                <h3 class="module-top-performers-title">Top Performers</h3>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="module-trophy-icon">
+                                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                                    <path d="M4 22h16"></path>
+                                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                                </svg>
+                            </div>
+
+                            <div id="topPerformersList" class="module-top-performers-list">
+                                <!-- Populated by JavaScript -->
+                            </div>
+
+                            <a href="hive-leaderboards.html" class="module-leaderboard-link">
+                                View Full Leaderboard →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Start Module Section -->
+                    <div class="module-content-area">
+                        <div class="module-start-card">
+                            <h2 class="module-start-title">Ready to Practice?</h2>
+                            <p class="module-start-description">
+                                This module opens in the Stinger annotation environment. Your progress will be tracked and you'll earn XP upon completion.
+                            </p>
+
+                            <button class="module-start-btn">
+                                Start Practicing
+                            </button>
+
+                            <div id="moduleCompanyDisclaimer" class="module-disclaimer">
+                                <!-- Populated by JavaScript if company module -->
+                            </div>
+                        </div>
+
+                        <!-- Progress Indicator (if completed) -->
+                        <div class="module-progress-card">
+                            <div class="module-progress-content">
+                                <div class="module-progress-info">
+                                    <div class="module-progress-completed">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                        </svg>
+                                        <span>Previously Completed</span>
+                                    </div>
+                                    <div class="module-progress-stats">
+                                        Last attempt: 92% accuracy • Best score: 95%
+                                    </div>
+                                </div>
+                                <button class="module-retry-btn">
+                                    Try Again
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Modules -->
+        <section id="relatedModulesSection" class="module-related-section" style="display: none;">
+            <div class="container">
+                <h2 class="module-section-title">You May Also Like</h2>
+
+                <div id="relatedModulesGrid" class="module-related-grid">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Job Path Academy</h3>
+                    <p class="footer-description">Connecting skilled annotators with AI companies building the future.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">For Annotators</h4>
+                    <ul class="footer-links">
+                        <li><a href="jobs.html">Browse Jobs</a></li>
+                        <li><a href="hive.html">The Hive</a></li>
+                        <li><a href="auth.html">Sign Up</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">For Companies</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#for-companies">Post a Job</a></li>
+                        <li><a href="index.html#for-companies">Find Talent</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Job Path Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="hive-module-detail.js"></script>
+</body>
+</html>
