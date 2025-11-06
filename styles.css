@@ -1536,3 +1536,488 @@ a {
         font-size: 4.5rem;
     }
 }
+
+/* ==========================================================================
+   Hive Page Styles
+   ========================================================================== */
+
+/* Hive Hero */
+.hive-hero {
+    padding: 8rem 1.5rem 4rem;
+    text-align: center;
+}
+
+.hive-hero-title {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.hive-hero-title-gradient {
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+}
+
+.hive-hero-description {
+    font-size: 1.25rem;
+    color: var(--muted-foreground);
+    max-width: 672px;
+    margin: 0 auto 3rem;
+}
+
+.hive-stats-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+    background-color: rgba(30, 35, 45, 0.5);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+}
+
+.hive-stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.hive-level-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-foreground);
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+.hive-stat-text {
+    text-align: left;
+}
+
+.hive-stat-label {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+}
+
+.hive-stat-value {
+    font-weight: 500;
+}
+
+.hive-stat-divider {
+    width: 1px;
+    height: 40px;
+    background-color: var(--border);
+}
+
+/* Hive Leaderboard */
+.hive-leaderboard {
+    padding: 4rem 1.5rem;
+}
+
+.hive-section-title {
+    font-size: 1.875rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.hive-tabs {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 672px;
+    margin: 0 auto 2rem;
+    background-color: var(--muted);
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+}
+
+.hive-tab {
+    padding: 0.5rem 1rem;
+    background: none;
+    border: none;
+    border-radius: 0.375rem;
+    color: var(--foreground);
+    font-family: inherit;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.hive-tab.active {
+    background-color: var(--background);
+    box-shadow: var(--shadow-soft);
+}
+
+.hive-leaderboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.leaderboard-card {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    transition: all 0.3s;
+}
+
+.leaderboard-card:hover {
+    box-shadow: var(--shadow-glow);
+}
+
+.leaderboard-card.rank-1 {
+    transform: scale(1.05);
+    border-color: rgba(250, 204, 21, 0.5);
+}
+
+.leaderboard-trophy {
+    width: 24px;
+    height: 24px;
+    margin: 0 auto 0.75rem;
+}
+
+.leaderboard-trophy.gold {
+    color: #f59e0b;
+}
+
+.leaderboard-trophy.silver {
+    color: #94a3b8;
+}
+
+.leaderboard-trophy.bronze {
+    color: #b45309;
+}
+
+.leaderboard-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    margin: 0 auto 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-foreground);
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+.leaderboard-name {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.leaderboard-rank {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    margin-bottom: 0.5rem;
+}
+
+.leaderboard-xp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    color: var(--primary);
+}
+
+.leaderboard-xp svg {
+    fill: currentColor;
+}
+
+.leaderboard-xp span {
+    font-weight: 500;
+}
+
+.hive-leaderboard-cta {
+    text-align: center;
+}
+
+/* Hive Modules */
+.hive-modules {
+    padding: 4rem 1.5rem;
+}
+
+.hive-filter-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.hive-type-filter,
+.hive-state-filter {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.hive-filter-btn {
+    flex: 1;
+}
+
+.hive-module-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.module-card {
+    position: relative;
+    display: block;
+    padding: 1.5rem;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    animation: scale-in 0.4s ease-out;
+    animation-fill-mode: both;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+}
+
+.module-card:hover {
+    box-shadow: var(--shadow-glow);
+}
+
+.module-completed-badge {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.module-completed-badge svg {
+    color: #22c55e;
+}
+
+.module-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 0.5rem;
+    background: linear-gradient(to bottom right, rgba(250, 204, 21, 0.2), rgba(168, 85, 247, 0.2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.module-icon svg {
+    color: var(--primary);
+}
+
+.module-badges {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.module-badge {
+    padding: 0.125rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+}
+
+.module-badge.difficulty-beginner {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    border-color: rgba(34, 197, 94, 0.2);
+}
+
+.module-badge.difficulty-intermediate {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+    border-color: rgba(245, 158, 11, 0.2);
+}
+
+.module-badge.difficulty-advanced {
+    background: rgba(168, 85, 247, 0.1);
+    color: #a855f7;
+    border-color: rgba(168, 85, 247, 0.2);
+}
+
+.module-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    transition: color 0.3s;
+}
+
+.module-card:hover .module-title {
+    color: var(--primary);
+}
+
+.module-progress {
+    margin-bottom: 0.75rem;
+}
+
+.module-progress-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--muted-foreground);
+    margin-bottom: 0.375rem;
+}
+
+.module-progress-value {
+    font-weight: 500;
+}
+
+.module-progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: var(--secondary);
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.module-progress-fill {
+    height: 100%;
+    background-color: var(--primary);
+    border-radius: 9999px;
+    transition: width 0.3s;
+}
+
+.module-score {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.module-score-bar {
+    flex: 1;
+    height: 6px;
+    background: rgba(34, 197, 94, 0.1);
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.module-score-fill {
+    height: 100%;
+    background: rgba(34, 197, 94, 0.4);
+    border-radius: 9999px;
+}
+
+.module-score-value {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #22c55e;
+}
+
+.module-description {
+    color: var(--muted-foreground);
+    font-size: 0.875rem;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+}
+
+.module-xp {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--primary);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.module-xp svg {
+    fill: currentColor;
+}
+
+.module-xp span {
+    font-weight: 500;
+}
+
+.hive-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    background-color: rgba(30, 35, 45, 0.5);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hive-empty-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.hive-empty-description {
+    color: var(--muted-foreground);
+    margin-bottom: 1.5rem;
+}
+
+.hive-cta-title {
+    font-size: 1.875rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive - Hive Page */
+@media (min-width: 768px) {
+    .hive-hero-title {
+        font-size: 4rem;
+    }
+
+    .hive-filter-bar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hive-filter-btn {
+        flex: initial;
+    }
+
+    .hive-module-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .leaderboard-card.rank-1 {
+        transform: scale(1.05);
+    }
+}
+
+@media (min-width: 1024px) {
+    .hive-hero-title {
+        font-size: 4.5rem;
+    }
+
+    .hive-module-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .hive-cta-title {
+        font-size: 2.5rem;
+    }
+}
