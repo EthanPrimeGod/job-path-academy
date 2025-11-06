@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounding Boxes 101 - Practice | The Hive</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="practice-page">
+        <!-- Header -->
+        <header class="practice-header">
+            <div class="practice-header-content">
+                <!-- Breadcrumb -->
+                <div class="practice-breadcrumb">
+                    <a href="hive.html" class="practice-breadcrumb-link">The Hive</a>
+                    <span class="practice-breadcrumb-separator">→</span>
+                    <span class="practice-breadcrumb-current" id="practiceModuleTitle">Bounding Boxes 101</span>
+                </div>
+
+                <!-- Mode Badge (Centered) -->
+                <div class="practice-mode-badge">
+                    <span class="practice-badge">Practice Mode</span>
+                </div>
+
+                <!-- Utilities -->
+                <div class="practice-utilities">
+                    <button class="practice-util-btn" title="Help & Documentation">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>
+                    </button>
+                    <button class="practice-util-btn" title="Settings">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.25M15.54 15.54l4.24 4.25M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"></path>
+                        </svg>
+                    </button>
+                    <a href="hive.html" class="practice-exit-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                        Exit
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Workspace -->
+        <div class="practice-workspace">
+            <!-- Left Sidebar - Controls & Task Info -->
+            <aside class="practice-sidebar practice-sidebar-left">
+                <div class="practice-sidebar-content">
+                    <!-- Task Info -->
+                    <div class="practice-section">
+                        <div class="practice-task-header">
+                            <h2 class="practice-task-title" id="taskTitle">Bounding Boxes 101</h2>
+                            <span class="practice-task-badge" id="taskCategory">Computer Vision</span>
+                        </div>
+                        <p class="practice-task-objective" id="taskObjective">
+                            Draw boxes around all visible cars in each image.
+                        </p>
+                    </div>
+
+                    <!-- Instructions (Collapsible) -->
+                    <div class="practice-section">
+                        <button class="practice-collapsible-trigger" id="instructionsToggle">
+                            <span>Instructions</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="practice-chevron">
+                                <polyline points="18 15 12 9 6 15"></polyline>
+                            </svg>
+                        </button>
+                        <div class="practice-collapsible-content" id="instructionsContent">
+                            <ol class="practice-instructions-list" id="instructionsList">
+                                <!-- Populated by JavaScript -->
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="practice-divider"></div>
+
+                    <!-- Toolset -->
+                    <div class="practice-section">
+                        <h3 class="practice-section-title">Tools</h3>
+                        <div class="practice-tools-grid" id="toolsGrid">
+                            <!-- Populated by JavaScript -->
+                        </div>
+
+                        <!-- Undo/Redo -->
+                        <div class="practice-undo-redo">
+                            <button class="practice-undo-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 7v6h6"></path>
+                                    <path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"></path>
+                                </svg>
+                                Undo
+                            </button>
+                            <button class="practice-redo-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 7v6h-6"></path>
+                                    <path d="M3 17a9 9 0 0 1 9-9 9 9 0 0 1 6 2.3l3 2.7"></path>
+                                </svg>
+                                Redo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Center Panel - Canvas -->
+            <main class="practice-canvas-area">
+                <!-- Canvas Header -->
+                <div class="practice-canvas-header">
+                    <div class="practice-canvas-header-content">
+                        <div class="practice-dataset">
+                            Dataset: <span id="datasetName">COCO-2024</span>
+                        </div>
+                        <div class="practice-image-counter">
+                            Image <span id="currentTask">3</span> of <span id="totalTasks">10</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Canvas Area -->
+                <div class="practice-canvas-container">
+                    <div class="practice-canvas">
+                        <!-- Placeholder for Stinger Canvas -->
+                        <div class="practice-canvas-placeholder">
+                            <div class="practice-canvas-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                </svg>
+                            </div>
+                            <div class="practice-canvas-text">
+                                <div class="practice-canvas-title">Annotation Canvas</div>
+                                <div class="practice-canvas-subtitle">Stinger tool will load here</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Canvas Controls -->
+                <div class="practice-canvas-controls">
+                    <div class="practice-zoom-controls">
+                        <button class="practice-zoom-btn" id="zoomOut">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                                <line x1="8" y1="11" x2="14" y2="11"></line>
+                            </svg>
+                        </button>
+                        <span class="practice-zoom-level" id="zoomLevel">100%</span>
+                        <button class="practice-zoom-btn" id="zoomIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                                <line x1="11" y1="8" x2="11" y2="14"></line>
+                                <line x1="8" y1="11" x2="14" y2="11"></line>
+                            </svg>
+                        </button>
+                        <div class="practice-divider-vertical"></div>
+                        <button class="practice-zoom-reset" id="zoomReset">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <polyline points="9 21 3 21 3 15"></polyline>
+                                <line x1="21" y1="3" x2="14" y2="10"></line>
+                                <line x1="3" y1="21" x2="10" y2="14"></line>
+                            </svg>
+                            Reset
+                        </button>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Right Sidebar - Progress & Metadata -->
+            <aside class="practice-sidebar practice-sidebar-right">
+                <div class="practice-sidebar-content">
+                    <!-- Progress -->
+                    <div class="practice-section">
+                        <div class="practice-progress-header">
+                            <h3 class="practice-section-title">Progress</h3>
+                            <span class="practice-progress-count" id="progressCount">3/10</span>
+                        </div>
+                        <div class="practice-progress-bar">
+                            <div class="practice-progress-fill" id="progressFill" style="width: 30%"></div>
+                        </div>
+                        <p class="practice-progress-text" id="progressText">7 tasks remaining</p>
+                    </div>
+
+                    <div class="practice-divider"></div>
+
+                    <!-- Labels -->
+                    <div class="practice-section">
+                        <h3 class="practice-section-title">Labels</h3>
+                        <div class="practice-labels-list" id="labelsList">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="practice-divider"></div>
+
+                    <!-- History -->
+                    <div class="practice-section">
+                        <h3 class="practice-section-title">Recent Actions</h3>
+                        <div class="practice-history-list" id="historyList">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="practice-divider"></div>
+
+                    <!-- Actions -->
+                    <div class="practice-section">
+                        <div class="practice-actions">
+                            <button class="practice-save-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                                    <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                                    <polyline points="7 3 7 8 15 8"></polyline>
+                                </svg>
+                                Save Progress
+                            </button>
+                            <button class="practice-submit-btn" id="submitBtn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                                Submit Practice
+                            </button>
+                            <p class="practice-submit-note">Scored automatically</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Footer Status Bar -->
+        <footer class="practice-footer">
+            <div class="practice-footer-content">
+                <div class="practice-footer-left">
+                    <span id="filename">COCO_2024_001247.jpg</span>
+                    <div class="practice-footer-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span id="timer">05:34</span>
+                    </div>
+                </div>
+
+                <div class="practice-footer-right">
+                    <div class="practice-footer-item practice-footer-saved">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                            <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                            <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                            <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                        </svg>
+                        <span>All changes saved</span>
+                    </div>
+                    <div class="practice-footer-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                        <span>+<span id="xpReward">40</span> XP on completion</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="hive-module-practice.js"></script>
+</body>
+</html>

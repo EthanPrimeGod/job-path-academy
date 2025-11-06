@@ -3860,3 +3860,726 @@ a {
         order: 2;
     }
 }
+
+/* ==================================
+   PRACTICE PAGE STYLES
+   ================================== */
+
+.practice-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+}
+
+/* Header */
+.practice-header {
+    height: 56px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: linear-gradient(90deg, rgba(30, 35, 45, 0.6), rgba(30, 35, 45, 0.4), rgba(30, 35, 45, 0.6));
+    backdrop-filter: blur(24px);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.practice-header-content {
+    height: 100%;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Breadcrumb */
+.practice-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.practice-breadcrumb-link {
+    color: var(--muted-foreground);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.practice-breadcrumb-link:hover {
+    color: var(--foreground);
+}
+
+.practice-breadcrumb-separator {
+    color: var(--muted-foreground);
+}
+
+.practice-breadcrumb-current {
+    color: var(--foreground);
+    font-weight: 500;
+}
+
+/* Mode Badge (Centered) */
+.practice-mode-badge {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.practice-badge {
+    display: inline-block;
+    padding: 0.375rem 0.875rem;
+    background-color: rgba(var(--primary-rgb), 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(var(--primary-rgb), 0.3);
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Utilities */
+.practice-utilities {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.practice-util-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    border-radius: 0.375rem;
+    color: var(--muted-foreground);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.practice-util-btn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--foreground);
+}
+
+.practice-util-btn svg {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2;
+}
+
+.practice-exit-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.375rem 0.75rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 0.375rem;
+    color: var(--muted-foreground);
+    font-size: 0.875rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.practice-exit-btn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--foreground);
+}
+
+.practice-exit-btn svg {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2;
+}
+
+/* Workspace */
+.practice-workspace {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+/* Sidebars */
+.practice-sidebar {
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: rgba(30, 35, 45, 0.3);
+    backdrop-filter: blur(8px);
+    overflow-y: auto;
+}
+
+.practice-sidebar-left {
+    width: 320px;
+}
+
+.practice-sidebar-right {
+    width: 288px;
+    border-right: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.practice-sidebar-content {
+    padding: 1.5rem;
+}
+
+.practice-section {
+    margin-bottom: 1.5rem;
+}
+
+.practice-section:last-child {
+    margin-bottom: 0;
+}
+
+.practice-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.05);
+    margin: 1.5rem 0;
+}
+
+.practice-section-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+/* Task Info */
+.practice-task-header {
+    margin-bottom: 0.75rem;
+}
+
+.practice-task-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.practice-task-badge {
+    display: inline-block;
+    padding: 0.25rem 0.625rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.practice-task-objective {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    line-height: 1.5;
+}
+
+/* Collapsible Instructions */
+.practice-collapsible-trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    background: none;
+    border: none;
+    color: var(--foreground);
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.practice-collapsible-trigger:hover {
+    color: var(--primary);
+}
+
+.practice-chevron {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.practice-collapsible-content {
+    margin-top: 0.75rem;
+}
+
+.practice-instructions-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.practice-instruction-item {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    line-height: 1.5;
+}
+
+.practice-instruction-number {
+    color: var(--primary);
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+/* Tools Grid */
+.practice-tools-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.practice-tool-btn {
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.375rem;
+    color: var(--foreground);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.practice-tool-btn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.practice-tool-btn.active {
+    background-color: rgba(var(--primary-rgb), 0.2);
+    color: var(--primary);
+    border-color: rgba(var(--primary-rgb), 0.5);
+    box-shadow: 0 0 20px rgba(var(--primary-rgb), 0.2);
+}
+
+.practice-tool-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
+}
+
+/* Undo/Redo */
+.practice-undo-redo {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.practice-undo-btn,
+.practice-redo-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+    padding: 0.5rem;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.375rem;
+    color: var(--foreground);
+    font-family: inherit;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.practice-undo-btn:hover,
+.practice-redo-btn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.practice-undo-btn svg,
+.practice-redo-btn svg {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2;
+}
+
+/* Canvas Area */
+.practice-canvas-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, var(--background), rgba(30, 35, 45, 0.05), var(--background));
+    overflow: hidden;
+}
+
+.practice-canvas-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: rgba(30, 35, 45, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+.practice-canvas-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.practice-dataset {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+}
+
+.practice-dataset span {
+    color: var(--foreground);
+}
+
+.practice-image-counter {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Canvas Container */
+.practice-canvas-container {
+    flex: 1;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.practice-canvas {
+    position: relative;
+    max-width: 80rem;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: rgba(30, 35, 45, 0.4);
+    backdrop-filter: blur(16px);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+}
+
+.practice-canvas-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-center: center;
+    gap: 0.75rem;
+}
+
+.practice-canvas-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 0.75rem;
+    background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.2), rgba(var(--secondary-rgb), 0.2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.practice-canvas-icon svg {
+    width: 32px;
+    height: 32px;
+    color: var(--primary);
+    stroke-width: 2;
+}
+
+.practice-canvas-text {
+    text-align: center;
+}
+
+.practice-canvas-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.practice-canvas-subtitle {
+    font-size: 0.75rem;
+    color: var(--muted-foreground);
+}
+
+/* Canvas Controls */
+.practice-canvas-controls {
+    padding: 0.75rem 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: rgba(30, 35, 255, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+.practice-zoom-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.practice-zoom-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.375rem;
+    color: var(--foreground);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.practice-zoom-btn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.practice-zoom-btn svg {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2;
+}
+
+.practice-zoom-level {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    min-width: 64px;
+    text-align: center;
+}
+
+.practice-divider-vertical {
+    width: 1px;
+    height: 16px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.practice-zoom-reset {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.375rem 0.75rem;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.375rem;
+    color: var(--foreground);
+    font-family: inherit;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.practice-zoom-reset:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.practice-zoom-reset svg {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2;
+}
+
+/* Progress */
+.practice-progress-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.practice-progress-count {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+}
+
+.practice-progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.practice-progress-fill {
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.practice-progress-text {
+    font-size: 0.75rem;
+    color: var(--muted-foreground);
+}
+
+/* Labels */
+.practice-labels-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.practice-label-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.875rem;
+}
+
+.practice-label-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.practice-label-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.practice-label-name {
+    color: var(--foreground);
+}
+
+.practice-label-count {
+    color: var(--muted-foreground);
+}
+
+/* History */
+.practice-history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+}
+
+.practice-history-item {
+    font-size: 0.75rem;
+    color: var(--muted-foreground);
+    padding: 0.25rem 0;
+}
+
+/* Actions */
+.practice-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.practice-save-btn,
+.practice-submit-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.practice-save-btn {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--foreground);
+}
+
+.practice-save-btn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.practice-submit-btn {
+    background: var(--gradient-primary);
+    color: var(--primary-foreground);
+    box-shadow: var(--shadow-glow);
+}
+
+.practice-submit-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.practice-save-btn svg,
+.practice-submit-btn svg {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2;
+}
+
+.practice-submit-note {
+    font-size: 0.75rem;
+    color: var(--muted-foreground);
+    text-align: center;
+}
+
+/* Footer */
+.practice-footer {
+    height: 36px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: rgba(30, 35, 45, 0.2);
+    backdrop-filter: blur(8px);
+    padding: 0 1.5rem;
+}
+
+.practice-footer-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--muted-foreground);
+}
+
+.practice-footer-left,
+.practice-footer-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.practice-footer-item {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+}
+
+.practice-footer-item svg {
+    width: 12px;
+    height: 12px;
+    stroke-width: 2;
+}
+
+.practice-footer-saved {
+    color: var(--accent);
+}
+
+/* Responsive - Practice Page */
+@media (max-width: 1024px) {
+    .practice-sidebar-left {
+        width: 280px;
+    }
+
+    .practice-sidebar-right {
+        width: 256px;
+    }
+}
+
+@media (max-width: 768px) {
+    .practice-mode-badge {
+        display: none;
+    }
+
+    .practice-sidebar-left,
+    .practice-sidebar-right {
+        display: none;
+    }
+
+    .practice-canvas-area {
+        width: 100%;
+    }
+}
