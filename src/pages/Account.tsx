@@ -30,7 +30,8 @@ const Account = () => {
   const tabs = [
     { path: "/account", label: "Overview", exact: true },
     { path: "/account/hive", label: "Hive" },
-    { path: "/account/jobs", label: "Jobs" },
+    { path: "/account/applications", label: "Applications" },
+    { path: "/account/messages", label: "Messages" },
     { path: "/account/settings", label: "Settings" }
   ];
 

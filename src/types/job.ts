@@ -15,5 +15,6 @@ export interface Job {
   tags: string[];
   postedDate: string;
   featured?: boolean;
-  applyUrl: string;
+  applyUrl?: string; // External application URL (if set, use external flow)
+  useInternalATS?: boolean; // If true and no applyUrl, use internal ATS
 }
