@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Hive | Annota - Practice & Improve Your Skills</title>
+  <meta name="description" content="Refine your annotation skills, earn credentials, and climb the leaderboard. Practice with real-world AI annotation modules.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/public/favicon.ico">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="hive.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="/src/assets/annota-logo.png" alt="Annota Logo">
+        <span class="hide-mobile">Annota</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/jobs.html">Jobs</a></li>
+        <li><a href="/hive.html" class="active">Hive</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+
+      <div class="nav-auth">
+        <a href="/auth.html" class="btn btn-ghost btn-sm">Sign In</a>
+        <a href="/auth.html" class="btn btn-default btn-sm">Sign Up</a>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <ul class="mobile-menu-links">
+      <li><a href="/jobs.html">Jobs</a></li>
+      <li><a href="/hive.html" class="active">Hive</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+
+    <div class="mobile-menu-auth">
+      <a href="/auth.html" class="btn btn-ghost btn-full">Sign In</a>
+      <a href="/auth.html" class="btn btn-default btn-full">Sign Up</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hive-hero">
+    <div class="hive-hero-content">
+      <h1>
+        Welcome to <span class="gradient-text">The Hive</span>
+      </h1>
+      <p>Refine your skills, earn credentials, and climb the ranks.</p>
+
+      <!-- User Stats Card -->
+      <div class="user-stats-card card">
+        <div class="user-stat">
+          <div class="user-level-badge">4</div>
+          <div class="user-stat-text">
+            <div class="user-stat-label">Level</div>
+            <div class="user-stat-value">Vision Apprentice</div>
+          </div>
+        </div>
+        <div class="user-stats-divider"></div>
+        <div class="user-stat-text">
+          <div class="user-stat-label">Progress</div>
+          <div class="user-stat-value">3 Modules Completed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leaderboard Section -->
+  <section class="leaderboard-section">
+    <div class="leaderboard-container">
+      <h2>Global Leaderboard</h2>
+
+      <!-- Leaderboard Tabs -->
+      <div class="leaderboard-tabs">
+        <button class="leaderboard-tab active" data-skill="all">🐝 All Skills</button>
+        <button class="leaderboard-tab" data-skill="image">🖼 Image</button>
+        <button class="leaderboard-tab" data-skill="text">📝 Text</button>
+        <button class="leaderboard-tab" data-skill="audio">🔊 Audio</button>
+        <button class="leaderboard-tab" data-skill="video">🎥 Video</button>
+      </div>
+
+      <!-- Top Annotators Grid -->
+      <div id="leaderboard-grid" class="leaderboard-grid"></div>
+
+      <div class="leaderboard-cta">
+        <a href="/hive/leaderboards.html" class="btn btn-outline btn-lg">
+          View Full Leaderboard →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modules Section -->
+  <section class="modules-section">
+    <div class="modules-container">
+      <!-- Filter Bar -->
+      <div class="modules-filters">
+        <div class="modules-type-filter">
+          <button class="btn btn-default module-type-btn active" data-type="core">
+            Core Modules
+          </button>
+          <button class="btn btn-outline module-type-btn" data-type="company">
+            Company Modules
+          </button>
+        </div>
+
+        <!-- State Filter (only show when authenticated) -->
+        <div id="state-filter" class="modules-state-filter">
+          <button class="btn btn-default btn-sm state-filter-btn active" data-state="all">
+            All
+          </button>
+          <button class="btn btn-outline btn-sm state-filter-btn" data-state="in-progress">
+            In Progress
+          </button>
+          <button class="btn btn-outline btn-sm state-filter-btn" data-state="completed">
+            Completed
+          </button>
+        </div>
+      </div>
+
+      <!-- Modules Grid -->
+      <div id="modules-grid" class="modules-grid"></div>
+
+      <!-- No Modules Message -->
+      <div id="no-modules" class="no-modules card" style="display: none;">
+        <h3>Nothing here yet</h3>
+        <p>Try another filter or start a new module.</p>
+        <button class="btn btn-outline btn-sm" onclick="resetFilters()">
+          View All Modules
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="hive-cta-section">
+    <div class="hive-cta-container">
+      <div class="hive-cta-card">
+        <h2>Ready to see where you stand?</h2>
+        <a href="/hive/leaderboards.html" class="btn btn-lg" style="background: var(--gradient-primary); color: var(--primary-foreground); border: none; box-shadow: var(--shadow-glow);">
+          View Leaderboards
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-logo">Annota</div>
+
+        <ul class="footer-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-copyright">
+        © 2025 Annota. Building the future of AI annotation.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="hive.js"></script>
+</body>
+</html>
