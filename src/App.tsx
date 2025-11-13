@@ -14,7 +14,12 @@ import Account from "./pages/Account";
 import AccountOverview from "./pages/AccountOverview";
 import AccountHive from "./pages/AccountHive";
 import AccountJobs from "./pages/AccountJobs";
+import AccountApplications from "./pages/AccountApplications";
+import AccountApplicationDetail from "./pages/AccountApplicationDetail";
+import AccountMessages from "./pages/AccountMessages";
+import AccountMessageDetail from "./pages/AccountMessageDetail";
 import AccountSettings from "./pages/AccountSettings";
+import JobApply from "./pages/JobApply";
 import NotFound from "./pages/NotFound";
 import ThankYou from "./pages/ThankYou";
 import CompanyOverview from "./pages/company/CompanyOverview";
@@ -45,12 +50,17 @@ const App = () => (
           <Route path="/hive/:moduleId" element={<HiveModuleDetail />} />
           <Route path="/hive/:moduleId/start" element={<HiveModulePractice />} />
           <Route path="/auth" element={<Auth />} />
-          <Route path="/account" element={<Account />}>
-            <Route index element={<AccountOverview />} />
-            <Route path="hive" element={<AccountHive />} />
-            <Route path="jobs" element={<AccountJobs />} />
+        <Route path="/account" element={<Account />}>
+          <Route index element={<AccountOverview />} />
+          <Route path="hive" element={<AccountHive />} />
+          <Route path="jobs" element={<AccountJobs />} />
+          <Route path="applications" element={<AccountApplications />} />
+          <Route path="applications/:id" element={<AccountApplicationDetail />} />
+          <Route path="messages" element={<AccountMessages />} />
+          <Route path="messages/:id" element={<AccountMessageDetail />} />
           <Route path="settings" element={<AccountSettings />} />
-          </Route>
+        </Route>
+        <Route path="/jobs/:id/apply" element={<JobApply />} />
           <Route path="/company" element={<CompanyOverview />} />
           <Route path="/company/jobs" element={<CompanyJobs />} />
           <Route path="/company/jobs/:jobId" element={<CompanyJobDetail />} />

@@ -29,7 +29,7 @@ export const jobs: Job[] = [
     tags: ["Remote", "Computer Vision", "Bounding Boxes"],
     postedDate: "2 days ago",
     featured: true,
-    applyUrl: "https://example.com/apply/1"
+    useInternalATS: true
   },
   {
     id: "2",
@@ -59,7 +59,7 @@ export const jobs: Job[] = [
     tags: ["Hybrid", "NLP", "Chatbots"],
     postedDate: "5 days ago",
     featured: false,
-    applyUrl: "https://example.com/apply/2"
+    useInternalATS: true
   },
   {
     id: "3",

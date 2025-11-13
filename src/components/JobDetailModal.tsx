@@ -112,22 +112,35 @@ export const JobDetailModal = ({ job, open, onOpenChange }: JobDetailModalProps)
         <Separator className="my-6" />
 
         <div className="flex gap-4">
-          <Button
-            variant="hero"
-            size="lg"
-            className="flex-1 bg-gradient-primary hover:opacity-90 transition-opacity shadow-glow"
-            asChild
-          >
-            <a
-              href={job.applyUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2"
+          {job.applyUrl ? (
+            <Button
+              variant="hero"
+              size="lg"
+              className="flex-1 bg-gradient-primary hover:opacity-90 transition-opacity shadow-glow"
+              asChild
             >
-              Apply on Company Site
-              <ExternalLink className="w-4 h-4" />
-            </a>
-          </Button>
+              <a
+                href={job.applyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2"
+              >
+                Apply on Company Site
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </Button>
+          ) : job.useInternalATS ? (
+            <Button
+              variant="hero"
+              size="lg"
+              className="flex-1 bg-gradient-primary hover:opacity-90 transition-opacity shadow-glow"
+              asChild
+            >
+              <a href={`/jobs/${job.id}/apply`} className="flex items-center justify-center">
+                Apply
+              </a>
+            </Button>
+          ) : null}
         </div>
       </DialogContent>
     </Dialog>
