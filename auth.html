@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | Annota - Build the Future of AI</title>
+  <meta name="description" content="Sign in or create an account to access The Hive and start your AI annotation journey.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/public/favicon.ico">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="/src/assets/annota-logo.png" alt="Annota Logo">
+        <span class="hide-mobile">Annota</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/jobs.html">Jobs</a></li>
+        <li><a href="/hive.html">Hive</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+
+      <div class="nav-auth">
+        <a href="/auth.html" class="btn btn-ghost btn-sm">Sign In</a>
+        <a href="/auth.html" class="btn btn-default btn-sm">Sign Up</a>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <ul class="mobile-menu-links">
+      <li><a href="/jobs.html">Jobs</a></li>
+      <li><a href="/hive.html">Hive</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+
+    <div class="mobile-menu-auth">
+      <a href="/auth.html" class="btn btn-ghost btn-full">Sign In</a>
+      <a href="/auth.html" class="btn btn-default btn-full">Sign Up</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="auth-main">
+    <div class="auth-card card">
+      <div class="card-header text-center">
+        <h1 class="card-title">Welcome to Annota</h1>
+        <p class="card-description">
+          Sign in or create an account to start practicing in The Hive or post jobs.
+        </p>
+      </div>
+
+      <div class="card-content">
+        <!-- Mode Toggle -->
+        <div class="auth-mode-toggle">
+          <button class="auth-mode-btn active" data-mode="signin">Sign In</button>
+          <button class="auth-mode-btn" data-mode="signup">Create Account</button>
+        </div>
+
+        <!-- Sign In Form -->
+        <form id="signin-form" class="auth-form animate-fade-in">
+          <div class="form-group">
+            <label for="signin-email" class="form-label">Email</label>
+            <input
+              type="email"
+              id="signin-email"
+              class="form-input"
+              placeholder="you@example.com"
+              required
+            >
+            <span class="form-error" id="signin-email-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="signin-password" class="form-label">Password</label>
+            <div class="password-input-wrapper">
+              <input
+                type="password"
+                id="signin-password"
+                class="form-input"
+                placeholder="Enter your password"
+                required
+              >
+              <button type="button" class="password-toggle" data-input="signin-password">
+                <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <svg class="eye-off-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </button>
+            </div>
+            <span class="form-error" id="signin-password-error"></span>
+          </div>
+
+          <button type="submit" class="btn btn-outline btn-full btn-lg" id="signin-submit">
+            Sign In
+          </button>
+
+          <div class="auth-links">
+            <a href="/auth/reset.html" class="auth-link">Forgot password?</a>
+            <p class="text-muted">
+              Don't have an account?
+              <button type="button" class="auth-link-btn" data-switch="signup">Create one</button>
+            </p>
+          </div>
+
+          <!-- SSO Options -->
+          <div class="auth-divider">
+            <span>Or continue with</span>
+          </div>
+
+          <div class="auth-sso">
+            <button type="button" class="btn btn-outline" disabled>Google</button>
+            <button type="button" class="btn btn-outline" disabled>GitHub</button>
+          </div>
+        </form>
+
+        <!-- Sign Up Form -->
+        <form id="signup-form" class="auth-form" style="display: none;">
+          <!-- Role Toggle -->
+          <div class="form-group">
+            <label class="form-label">Account Type</label>
+            <div class="role-toggle">
+              <button type="button" class="role-btn active" data-role="annotator">Annotator</button>
+              <button type="button" class="role-btn" data-role="company">Company</button>
+            </div>
+          </div>
+
+          <!-- Annotator Fields -->
+          <div id="annotator-fields">
+            <div class="form-group">
+              <label for="annotator-username" class="form-label">Username</label>
+              <input
+                type="text"
+                id="annotator-username"
+                class="form-input"
+                placeholder="annotator123"
+              >
+              <span class="form-error" id="annotator-username-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="annotator-email" class="form-label">Email</label>
+              <input
+                type="email"
+                id="annotator-email"
+                class="form-input"
+                placeholder="you@example.com"
+              >
+              <span class="form-error" id="annotator-email-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="annotator-password" class="form-label">Password</label>
+              <div class="password-input-wrapper">
+                <input
+                  type="password"
+                  id="annotator-password"
+                  class="form-input"
+                  placeholder="Create a strong password"
+                >
+                <button type="button" class="password-toggle" data-input="annotator-password">
+                  <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  <svg class="eye-off-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                    <line x1="1" y1="1" x2="23" y2="23"></line>
+                  </svg>
+                </button>
+              </div>
+              <!-- Password Strength Indicator -->
+              <div class="password-strength" id="annotator-password-strength" style="display: none;">
+                <div class="password-strength-bar">
+                  <div class="password-strength-fill"></div>
+                </div>
+                <p class="password-strength-text"></p>
+              </div>
+              <span class="form-error" id="annotator-password-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="annotator-confirm" class="form-label">Confirm Password</label>
+              <div class="password-input-wrapper">
+                <input
+                  type="password"
+                  id="annotator-confirm"
+                  class="form-input"
+                  placeholder="Confirm your password"
+                >
+                <button type="button" class="password-toggle" data-input="annotator-confirm">
+                  <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  <svg class="eye-off-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                    <line x1="1" y1="1" x2="23" y2="23"></line>
+                  </svg>
+                </button>
+              </div>
+              <span class="form-error" id="annotator-confirm-error"></span>
+            </div>
+
+            <div class="form-checkbox-wrapper">
+              <input
+                type="checkbox"
+                id="annotator-terms"
+                class="form-checkbox"
+              >
+              <label for="annotator-terms" class="form-checkbox-label">
+                I agree to the <a href="/legal/terms.html" class="text-primary">Terms</a>
+                and <a href="/legal/privacy.html" class="text-primary">Privacy Policy</a>
+              </label>
+            </div>
+            <span class="form-error" id="annotator-terms-error"></span>
+          </div>
+
+          <!-- Company Fields -->
+          <div id="company-fields" style="display: none;">
+            <div class="form-group">
+              <label for="company-name" class="form-label">Company Name</label>
+              <input
+                type="text"
+                id="company-name"
+                class="form-input"
+                placeholder="Acme Inc."
+              >
+              <span class="form-error" id="company-name-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="company-email" class="form-label">Company Email</label>
+              <input
+                type="email"
+                id="company-email"
+                class="form-input"
+                placeholder="contact@company.com"
+              >
+              <span class="form-error" id="company-email-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="company-password" class="form-label">Password</label>
+              <div class="password-input-wrapper">
+                <input
+                  type="password"
+                  id="company-password"
+                  class="form-input"
+                  placeholder="Create a strong password"
+                >
+                <button type="button" class="password-toggle" data-input="company-password">
+                  <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  <svg class="eye-off-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                    <line x1="1" y1="1" x2="23" y2="23"></line>
+                  </svg>
+                </button>
+              </div>
+              <!-- Password Strength Indicator -->
+              <div class="password-strength" id="company-password-strength" style="display: none;">
+                <div class="password-strength-bar">
+                  <div class="password-strength-fill"></div>
+                </div>
+                <p class="password-strength-text"></p>
+              </div>
+              <span class="form-error" id="company-password-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="company-confirm" class="form-label">Confirm Password</label>
+              <div class="password-input-wrapper">
+                <input
+                  type="password"
+                  id="company-confirm"
+                  class="form-input"
+                  placeholder="Confirm your password"
+                >
+                <button type="button" class="password-toggle" data-input="company-confirm">
+                  <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  <svg class="eye-off-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                    <line x1="1" y1="1" x2="23" y2="23"></line>
+                  </svg>
+                </button>
+              </div>
+              <span class="form-error" id="company-confirm-error"></span>
+            </div>
+
+            <div class="form-checkbox-wrapper">
+              <input
+                type="checkbox"
+                id="company-terms"
+                class="form-checkbox"
+              >
+              <label for="company-terms" class="form-checkbox-label">
+                I agree to the <a href="/legal/terms.html" class="text-primary">Terms</a>
+                and <a href="/legal/privacy.html" class="text-primary">Privacy Policy</a>
+              </label>
+            </div>
+            <span class="form-error" id="company-terms-error"></span>
+          </div>
+
+          <button type="submit" class="btn btn-outline btn-full btn-lg" id="signup-submit">
+            Create Account
+          </button>
+
+          <p class="auth-links text-center text-muted">
+            Already have an account?
+            <button type="button" class="auth-link-btn" data-switch="signin">Sign in</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-logo">Annota</div>
+
+        <ul class="footer-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-copyright">
+        © 2025 Annota. Building the future of AI annotation.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="auth.js"></script>
+</body>
+</html>
