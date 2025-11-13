@@ -16,6 +16,7 @@ import AccountHive from "./pages/AccountHive";
 import AccountJobs from "./pages/AccountJobs";
 import AccountSettings from "./pages/AccountSettings";
 import NotFound from "./pages/NotFound";
+import ThankYou from "./pages/ThankYou";
 import CompanyOverview from "./pages/company/CompanyOverview";
 import CompanyJobs from "./pages/company/CompanyJobs";
 import CompanyJobDetail from "./pages/company/CompanyJobDetail";
@@ -62,6 +63,7 @@ const App = () => (
           <Route path="/company/billing" element={<CompanyBilling />} />
           <Route path="/company/team" element={<CompanyTeam />} />
           <Route path="/company/settings" element={<CompanySettings />} />
+          <Route path="/thank-you" element={<ThankYou />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
