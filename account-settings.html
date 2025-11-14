@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings | Account - Annota</title>
+  <meta name="description" content="Manage your account preferences and privacy.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/public/favicon.ico">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="account-hive.css">
+  <link rel="stylesheet" href="account-overview.css">
+  <link rel="stylesheet" href="account-settings.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="/src/assets/annota-logo.png" alt="Annota Logo">
+        <span class="hide-mobile">Annota</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/jobs.html">Jobs</a></li>
+        <li><a href="/hive.html">Hive</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+
+      <div class="nav-auth">
+        <a href="/auth.html" class="btn btn-ghost btn-sm">Sign In</a>
+        <a href="/auth.html" class="btn btn-default btn-sm">Sign Up</a>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobile-menu-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Profile Header -->
+  <section class="profile-header">
+    <div class="profile-header-container">
+      <div class="profile-info-row">
+        <div class="profile-info">
+          <div class="profile-avatar">AC</div>
+          <div class="profile-details">
+            <h1 class="profile-name">Alex Chen</h1>
+            <p class="profile-handle">@alexchen</p>
+            <p class="profile-bio">AI annotator specializing in computer vision</p>
+          </div>
+        </div>
+
+        <button class="btn btn-outline btn-sm" id="edit-profile-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16" style="margin-right: 0.5rem;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+          </svg>
+          Edit Profile
+        </button>
+      </div>
+
+      <div class="profile-stats">
+        <div class="stat-chip card">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+          </svg>
+          <span>12,450 XP</span>
+        </div>
+        <div class="stat-chip card">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+          </svg>
+          <span>8 Badges</span>
+        </div>
+        <div class="stat-chip card">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+          <span>12 Completed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tabs -->
+  <section class="account-tabs">
+    <div class="account-tabs-container">
+      <nav class="tabs-nav">
+        <a href="/account-overview.html" class="tab-link">Overview</a>
+        <a href="/account-hive.html" class="tab-link">Hive</a>
+        <a href="/account-applications.html" class="tab-link">Applications</a>
+        <a href="/account-messages.html" class="tab-link">Messages</a>
+        <a href="/account-settings.html" class="tab-link active">Settings</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="account-content">
+    <div class="account-content-container">
+      <div class="page-header">
+        <h1 class="page-title">Settings</h1>
+        <p class="page-subtitle">Manage your account preferences and privacy</p>
+      </div>
+
+      <!-- Profile Information -->
+      <div class="settings-card card">
+        <h2 class="settings-card-title">Profile Information</h2>
+        <div class="form-group">
+          <label for="display-name" class="form-label">Display Name</label>
+          <input type="text" id="display-name" class="form-input" value="Alex Chen">
+        </div>
+        <div class="form-group">
+          <label for="handle" class="form-label">Handle</label>
+          <div class="handle-input">
+            <span class="handle-prefix">@</span>
+            <input type="text" id="handle" class="form-input" value="alexchen">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="bio" class="form-label">Bio</label>
+          <textarea id="bio" class="form-textarea" rows="3">AI annotator specializing in computer vision</textarea>
+        </div>
+      </div>
+
+      <!-- Privacy & Visibility -->
+      <div class="settings-card card">
+        <h2 class="settings-card-title">Privacy & Visibility</h2>
+        <div class="settings-group">
+          <div class="setting-item">
+            <div class="setting-info">
+              <label class="setting-label" for="show-leaderboards">Show on Global Leaderboards</label>
+              <p class="setting-description">Display your rank and scores on public leaderboards</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="show-leaderboards" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="setting-divider"></div>
+          <div class="setting-item">
+            <div class="setting-info">
+              <label class="setting-label" for="show-company-modules">Show Company Module Results</label>
+              <p class="setting-description">Allow companies to see your performance on their specific modules</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="show-company-modules" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="setting-divider"></div>
+          <div class="setting-item">
+            <div class="setting-info">
+              <label class="setting-label" for="public-profile-setting">Public Profile</label>
+              <p class="setting-description">Make your profile visible to other users and potential employers</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="public-profile-setting" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notifications -->
+      <div class="settings-card card">
+        <h2 class="settings-card-title">Notifications</h2>
+        <div class="settings-group">
+          <div class="setting-item">
+            <div class="setting-info">
+              <label class="setting-label" for="email-notifications">Email Notifications</label>
+              <p class="setting-description">Receive updates about new jobs and achievements</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="email-notifications" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="setting-divider"></div>
+          <div class="setting-item">
+            <div class="setting-info">
+              <label class="setting-label" for="weekly-summary">Weekly Summary</label>
+              <p class="setting-description">Get a weekly email with your progress and stats</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="weekly-summary" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Save Actions -->
+      <div class="settings-actions">
+        <button class="btn btn-outline" id="cancel-btn">Cancel</button>
+        <button class="btn btn-default" id="save-btn">Save Changes</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-logo">Annota</div>
+        <ul class="footer-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+      <div class="footer-copyright">
+        © 2025 Annota. Building the future of AI annotation.
+      </div>
+    </div>
+  </footer>
+
+  <script src="account-settings.js"></script>
+</body>
+</html>
