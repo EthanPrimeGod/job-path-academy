@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Practice | The Hive - Annota</title>
+  <meta name="description" content="Practice annotation skills in The Hive annotation environment.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/public/favicon.ico">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="hive-practice.css">
+</head>
+<body class="practice-body">
+  <!-- Header -->
+  <header class="practice-header">
+    <div class="practice-header-content">
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <a href="/hive.html" class="breadcrumb-link">The Hive</a>
+        <span class="breadcrumb-separator">→</span>
+        <span id="breadcrumb-title" class="breadcrumb-current">Loading...</span>
+      </div>
+
+      <!-- Mode Badge (centered) -->
+      <div class="header-center">
+        <span class="practice-badge">Practice Mode</span>
+      </div>
+
+      <!-- Utilities -->
+      <div class="header-utilities">
+        <button class="icon-btn" id="help-btn" aria-label="Help">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </button>
+
+        <button class="icon-btn" id="settings-btn" aria-label="Settings">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </button>
+
+        <button class="exit-btn" id="exit-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+          Exit
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Workspace -->
+  <div class="practice-workspace">
+    <!-- Left Sidebar -->
+    <aside class="sidebar-left">
+      <div class="sidebar-content">
+        <!-- Task Info -->
+        <div class="task-info">
+          <div>
+            <h2 id="task-title" class="task-title">Loading...</h2>
+            <span id="task-category" class="task-category module-badge">Loading...</span>
+          </div>
+          <p id="task-objective" class="task-objective">Loading...</p>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions-section">
+          <button class="instructions-toggle" id="instructions-toggle">
+            <span class="instructions-label">Instructions</span>
+            <svg class="instructions-icon" id="instructions-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+            </svg>
+          </button>
+          <ol class="instructions-list" id="instructions-list">
+            <!-- Populated by JavaScript -->
+          </ol>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- Tools -->
+        <div class="tools-section">
+          <h3 class="tools-title">Tools</h3>
+          <div class="tools-grid" id="tools-grid">
+            <!-- Populated by JavaScript -->
+          </div>
+
+          <!-- Undo/Redo -->
+          <div class="undo-redo-controls">
+            <button class="btn btn-outline btn-sm" style="flex: 1;" id="undo-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16" style="margin-right: 0.375rem;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6" />
+              </svg>
+              Undo
+            </button>
+            <button class="btn btn-outline btn-sm" style="flex: 1;" id="redo-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16" style="margin-right: 0.375rem;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 10h-10a8 8 0 00-8 8v2M21 10l-6 6m6-6l-6-6" />
+              </svg>
+              Redo
+            </button>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Center Canvas -->
+    <main class="canvas-main">
+      <!-- Canvas Header -->
+      <div class="canvas-header">
+        <div class="canvas-header-content">
+          <div class="canvas-dataset">
+            Dataset: <span id="dataset-name">COCO-2024</span>
+          </div>
+          <div class="canvas-progress" id="canvas-progress">
+            Image 3 of 10
+          </div>
+        </div>
+      </div>
+
+      <!-- Canvas Area -->
+      <div class="canvas-area">
+        <div class="canvas-container">
+          <!-- Placeholder for annotation canvas -->
+          <div class="canvas-placeholder">
+            <div class="canvas-placeholder-content">
+              <div class="canvas-placeholder-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <div class="canvas-placeholder-text">
+                <div class="canvas-placeholder-title">Annotation Canvas</div>
+                <div class="canvas-placeholder-subtitle">Stinger tool will load here</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Canvas Controls -->
+      <div class="canvas-controls">
+        <div class="canvas-controls-content">
+          <button class="btn btn-outline btn-sm" id="zoom-out-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM13 10H7" />
+            </svg>
+          </button>
+          <span class="zoom-display" id="zoom-display">100%</span>
+          <button class="btn btn-outline btn-sm" id="zoom-in-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+            </svg>
+          </button>
+          <div class="controls-divider"></div>
+          <button class="btn btn-outline btn-sm" id="reset-zoom-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16" style="margin-right: 0.375rem;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+            </svg>
+            Reset
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Right Sidebar -->
+    <aside class="sidebar-right">
+      <div class="sidebar-content">
+        <!-- Progress -->
+        <div class="progress-section">
+          <div class="progress-header">
+            <h3 class="progress-title">Progress</h3>
+            <span id="progress-text" class="progress-text">3/10</span>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" id="progress-bar-fill" style="width: 30%;"></div>
+          </div>
+          <p id="progress-remaining" class="progress-remaining">7 tasks remaining</p>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- Labels -->
+        <div class="labels-section">
+          <h3 class="labels-title">Labels</h3>
+          <div class="labels-list" id="labels-list">
+            <!-- Populated by JavaScript -->
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- Recent Actions -->
+        <div class="history-section">
+          <h3 class="history-title">Recent Actions</h3>
+          <div class="history-list" id="history-list">
+            <!-- Populated by JavaScript -->
+          </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- Actions -->
+        <div class="actions-section">
+          <button class="btn btn-outline btn-sm btn-full" id="save-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16" style="margin-right: 0.5rem;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" />
+            </svg>
+            Save Progress
+          </button>
+          <button class="btn btn-sm btn-full" id="submit-btn" style="background: var(--gradient-primary); color: var(--primary-foreground); border: none; box-shadow: var(--shadow-glow);">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16" style="margin-right: 0.5rem;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+            </svg>
+            Submit Practice
+          </button>
+          <p class="actions-note">Scored automatically</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Footer Status Bar -->
+  <footer class="practice-footer">
+    <div class="practice-footer-content">
+      <div class="footer-left">
+        <span id="filename">COCO_2024_001247.jpg</span>
+        <div class="footer-time">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="12" height="12">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span id="timer">05:34</span>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-save-status">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="12" height="12">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+          </svg>
+          <span>All changes saved</span>
+        </div>
+        <div class="footer-xp">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="12" height="12">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+          </svg>
+          <span id="xp-reward">+40 XP on completion</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="hive-practice.js"></script>
+</body>
+</html>
