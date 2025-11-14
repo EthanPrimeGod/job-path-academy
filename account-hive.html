@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Hive Progress | Account - Annota</title>
+  <meta name="description" content="Track your Hive learning journey and achievements.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/public/favicon.ico">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="account-hive.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="/src/assets/annota-logo.png" alt="Annota Logo">
+        <span class="hide-mobile">Annota</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/jobs.html">Jobs</a></li>
+        <li><a href="/hive.html">Hive</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+
+      <div class="nav-auth">
+        <a href="/auth.html" class="btn btn-ghost btn-sm">Sign In</a>
+        <a href="/auth.html" class="btn btn-default btn-sm">Sign Up</a>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobile-menu-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Profile Header -->
+  <section class="profile-header">
+    <div class="profile-header-container">
+      <div class="profile-info-row">
+        <!-- Avatar & Info -->
+        <div class="profile-info">
+          <div class="profile-avatar">AC</div>
+          <div class="profile-details">
+            <h1 class="profile-name">Alex Chen</h1>
+            <p class="profile-handle">@alexchen</p>
+            <p class="profile-bio">AI annotator specializing in computer vision</p>
+          </div>
+        </div>
+
+        <!-- Edit Button -->
+        <button class="btn btn-outline btn-sm" id="edit-profile-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16" style="margin-right: 0.5rem;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+          </svg>
+          Edit Profile
+        </button>
+      </div>
+
+      <!-- Stats Chips -->
+      <div class="profile-stats">
+        <div class="stat-chip card">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+          </svg>
+          <span>12,450 XP</span>
+        </div>
+        <div class="stat-chip card">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+          </svg>
+          <span>8 Badges</span>
+        </div>
+        <div class="stat-chip card">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+          <span>12 Completed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tabs -->
+  <section class="account-tabs">
+    <div class="account-tabs-container">
+      <nav class="tabs-nav">
+        <a href="#" class="tab-link">Overview</a>
+        <a href="/account-hive.html" class="tab-link active">Hive</a>
+        <a href="#" class="tab-link">Jobs</a>
+        <a href="#" class="tab-link">Settings</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="account-content">
+    <div class="account-content-container">
+      <!-- Page Title -->
+      <div class="page-header">
+        <h1 class="page-title">Your Hive Progress</h1>
+        <p class="page-subtitle">Track your learning journey and achievements</p>
+      </div>
+
+      <!-- Summary Cards -->
+      <div class="summary-grid">
+        <div class="summary-card card">
+          <div class="summary-header">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+            </svg>
+            <span>Total XP</span>
+          </div>
+          <div class="summary-value">12,450</div>
+          <div class="summary-detail success">+340 this week</div>
+        </div>
+
+        <div class="summary-card card">
+          <div class="summary-header">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+            <span>Badges</span>
+          </div>
+          <div class="summary-value">8</div>
+          <button class="summary-link">View all →</button>
+        </div>
+
+        <div class="summary-card card">
+          <div class="summary-header">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+            <span>Modules</span>
+          </div>
+          <div class="summary-value">12 / 15</div>
+          <div class="summary-detail">3 in progress</div>
+        </div>
+
+        <div class="summary-card card">
+          <div class="summary-header">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+            <span>Streak</span>
+          </div>
+          <div class="summary-value">7 days</div>
+          <div class="summary-detail">Keep it up!</div>
+        </div>
+      </div>
+
+      <!-- Level Progress -->
+      <div class="level-card card">
+        <div class="level-header">
+          <div class="level-info">
+            <div class="level-label">Level 4 · Vision Apprentice</div>
+            <div class="level-title">2,550 XP to Level 5</div>
+          </div>
+          <div class="level-percent">68%</div>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill" style="width: 68%;"></div>
+        </div>
+      </div>
+
+      <!-- Leaderboard Standing -->
+      <div class="leaderboard-card card">
+        <div class="leaderboard-header">
+          <h3 class="leaderboard-title">Your Leaderboard Standing</h3>
+          <a href="/hive-leaderboards.html" class="btn btn-outline btn-sm">
+            View Full Leaderboards →
+          </a>
+        </div>
+        <div class="leaderboard-standings">
+          <div class="standing-item">
+            <div class="standing-label">Overall</div>
+            <div class="standing-value">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16" style="color: #f59e0b;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v-3m0 0c1.657 0 3-.895 3-2V6c0-1.105-1.343-2-3-2S9 4.895 9 6v4c0 1.105 1.343 2 3 2zm-6.364-.364l-.707-.707m12.728 0l.707-.707m-13.435-5l-.707-.707M18.364 5.636l.707-.707M3 12h3m15 0h3M7.05 19.05l-.707-.707m11.314 0l.707-.707" />
+              </svg>
+              <span>#24</span>
+            </div>
+          </div>
+          <div class="standing-item">
+            <div class="standing-label">Image</div>
+            <div class="standing-value"><span>#18</span></div>
+          </div>
+          <div class="standing-item">
+            <div class="standing-label">Text</div>
+            <div class="standing-value"><span>#31</span></div>
+          </div>
+          <div class="standing-item">
+            <div class="standing-label">Audio</div>
+            <div class="standing-value"><span>#45</span></div>
+          </div>
+          <div class="standing-item">
+            <div class="standing-label">Video</div>
+            <div class="standing-value"><span>—</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Module History -->
+      <div class="module-history-section">
+        <div class="module-history-header">
+          <h2 class="section-title">Module History</h2>
+          <div class="filter-buttons" id="module-filter">
+            <button class="btn btn-default btn-sm active" data-filter="all">All</button>
+            <button class="btn btn-outline btn-sm" data-filter="in-progress">In Progress</button>
+            <button class="btn btn-outline btn-sm" data-filter="completed">Completed</button>
+          </div>
+        </div>
+
+        <div id="module-history-list" class="module-history-list">
+          <!-- Populated by JavaScript -->
+        </div>
+
+        <div id="no-modules" class="no-modules card" style="display: none;">
+          <h3>No modules found</h3>
+          <p>Try a different filter or start a new module.</p>
+          <a href="/hive.html" class="btn btn-outline">Browse Modules</a>
+        </div>
+      </div>
+
+      <!-- Badges Section -->
+      <div class="badges-section">
+        <h2 class="section-title">Badges & Credentials</h2>
+        <div class="badges-grid">
+          <div class="badge-card card">
+            <div class="badge-icon">🎯</div>
+            <div class="badge-name">Bounding Box Novice</div>
+            <div class="badge-earned">2 weeks ago</div>
+          </div>
+          <div class="badge-card card">
+            <div class="badge-icon">📝</div>
+            <div class="badge-name">Text Master</div>
+            <div class="badge-earned">1 week ago</div>
+          </div>
+          <div class="badge-card card">
+            <div class="badge-icon">🔊</div>
+            <div class="badge-name">Audio Specialist</div>
+            <div class="badge-earned">3 days ago</div>
+          </div>
+          <div class="badge-card card">
+            <div class="badge-icon">👁️</div>
+            <div class="badge-name">Vision Apprentice</div>
+            <div class="badge-earned">1 day ago</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-logo">Annota</div>
+        <ul class="footer-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+      <div class="footer-copyright">
+        © 2025 Annota. Building the future of AI annotation.
+      </div>
+    </div>
+  </footer>
+
+  <script src="account-hive.js"></script>
+</body>
+</html>
