@@ -19,7 +19,7 @@ export const CTA = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-            <Button variant="hero" size="lg" asChild>
+            <Button variant="crayon-green" size="lg" asChild>
               <Link to="/jobs">Browse Jobs</Link>
             </Button>
             <Button variant="outline" size="lg">
