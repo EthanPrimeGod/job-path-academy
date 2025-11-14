@@ -47,18 +47,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-      },
-      backgroundImage: {
-        'gradient-primary': 'var(--gradient-primary)',
-        'gradient-subtle': 'var(--gradient-subtle)',
-        'gradient-accent': 'var(--gradient-accent)',
-      },
-      boxShadow: {
-        'soft': 'var(--shadow-soft)',
-        'glow': 'var(--shadow-glow)',
-      },
-      backdropBlur: {
-        'glass': '16px',
+        crayon: {
+          red: "hsl(var(--crayon-red))",
+          orange: "hsl(var(--crayon-orange))",
+          yellow: "hsl(var(--crayon-yellow))",
+          green: "hsl(var(--crayon-green))",
+          blue: "hsl(var(--crayon-blue))",
+          indigo: "hsl(var(--crayon-indigo))",
+          violet: "hsl(var(--crayon-violet))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

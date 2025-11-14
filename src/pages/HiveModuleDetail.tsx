@@ -272,13 +272,13 @@ const HiveModuleDetail = () => {
 
           {/* Start Module Section */}
           <div className="lg:col-span-2">
-            <Card className="p-12 bg-gradient-accent border-border/50 shadow-glow backdrop-blur-glass text-center">
-              <h2 className="text-3xl font-light mb-4">Ready to Practice?</h2>
+            <Card className="p-12 border-2 border-border bg-card text-center">
+              <h2 className="text-3xl font-bold mb-4">Ready to Practice?</h2>
               <p className="text-muted-foreground mb-8 max-w-md mx-auto">
                 This module opens in the Stinger annotation environment. Your progress will be tracked and you'll earn XP upon completion.
               </p>
               
-              <Button variant="hero" size="lg" className="mb-4">
+              <Button variant="crayon-yellow" size="lg" className="mb-4">
                 Start Practicing
               </Button>
               
