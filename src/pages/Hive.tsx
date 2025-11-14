@@ -402,11 +402,11 @@ const Hive = () => {
       {/* CTA Section */}
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="p-12 border-2 border-border bg-card">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <div className="p-12 rounded-3xl bg-gradient-accent border border-border/50 shadow-glow backdrop-blur-glass">
+            <h2 className="text-3xl md:text-4xl font-light mb-6">
               Ready to see where you stand?
             </h2>
-            <Button variant="crayon-violet" size="lg">
+            <Button variant="hero" size="lg">
               View Leaderboards
             </Button>
           </div>

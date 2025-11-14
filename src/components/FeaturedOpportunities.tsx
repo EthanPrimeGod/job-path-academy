@@ -63,7 +63,7 @@ export const FeaturedOpportunities = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="outline" size="lg" asChild>
+          <Button variant="hero" size="lg" asChild>
             <Link to="/jobs">View All Jobs</Link>
           </Button>
         </div>

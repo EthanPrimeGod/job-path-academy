@@ -8,54 +8,58 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Base colors - pure white paper */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    /* Base colors - deep charcoal foundation */
+    --background: 220 15% 8%;
+    --foreground: 220 10% 95%;
 
-    /* Card - flat white */
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    /* Card with glass effect */
+    --card: 220 15% 12%;
+    --card-foreground: 220 10% 95%;
 
     /* Popover */
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover: 220 15% 10%;
+    --popover-foreground: 220 10% 95%;
 
-    /* Primary - can be used for main CTAs */
-    --primary: 0 0% 10%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary - golden yellow accent */
+    --primary: 45 95% 58%;
+    --primary-foreground: 220 15% 10%;
 
-    /* Secondary - light gray */
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 10%;
+    /* Secondary - deep violet accent */
+    --secondary: 260 60% 65%;
+    --secondary-foreground: 220 10% 98%;
 
     /* Muted elements */
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 65%;
 
-    /* Accent - can be used sparingly */
-    --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 10%;
+    /* Accent - mint tone */
+    --accent: 165 55% 55%;
+    --accent-foreground: 220 15% 10%;
 
     /* Destructive */
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 220 10% 98%;
 
-    /* Borders and inputs - thin and subtle */
-    --border: 0 0% 89%;
-    --input: 0 0% 89%;
-    --ring: 0 0% 10%;
+    /* Borders and inputs - subtle */
+    --border: 220 15% 20%;
+    --input: 220 15% 18%;
+    --ring: 260 60% 65%;
 
-    /* Rounded corners - minimal */
-    --radius: 0.25rem;
+    /* Rounded corners */
+    --radius: 1rem;
 
-    /* Rainbow palette - ROYGBIV */
-    --crayon-red: 0 100% 63%;
-    --crayon-orange: 24 100% 60%;
-    --crayon-yellow: 48 100% 62%;
-    --crayon-green: 145 45% 60%;
-    --crayon-blue: 214 100% 65%;
-    --crayon-indigo: 248 79% 68%;
-    --crayon-violet: 270 68% 73%;
+    /* Gradient tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(45 95% 58%), hsl(260 60% 65%));
+    --gradient-subtle: linear-gradient(180deg, hsl(220 15% 10%), hsl(220 15% 8%));
+    --gradient-accent: linear-gradient(135deg, hsl(45 95% 58% / 0.1), hsl(260 60% 65% / 0.1));
+
+    /* Glass effect */
+    --glass-bg: hsl(220 15% 15% / 0.4);
+    --glass-border: hsl(220 10% 50% / 0.1);
+
+    /* Shadows */
+    --shadow-soft: 0 8px 32px hsl(220 15% 5% / 0.3);
+    --shadow-glow: 0 0 40px hsl(45 95% 58% / 0.2);
   }
 }
 

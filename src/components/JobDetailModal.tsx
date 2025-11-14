@@ -114,9 +114,9 @@ export const JobDetailModal = ({ job, open, onOpenChange }: JobDetailModalProps)
         <div className="flex gap-4">
           {job.applyUrl ? (
             <Button
-              variant="crayon-blue"
+              variant="hero"
               size="lg"
-              className="flex-1"
+              className="flex-1 bg-gradient-primary hover:opacity-90 transition-opacity shadow-glow"
               asChild
             >
               <a
@@ -131,9 +131,9 @@ export const JobDetailModal = ({ job, open, onOpenChange }: JobDetailModalProps)
             </Button>
           ) : job.useInternalATS ? (
             <Button
-              variant="crayon-green"
+              variant="hero"
               size="lg"
-              className="flex-1"
+              className="flex-1 bg-gradient-primary hover:opacity-90 transition-opacity shadow-glow"
               asChild
             >
               <a href={`/jobs/${job.id}/apply`} className="flex items-center justify-center">
