@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboards | The Hive - Annota</title>
+  <meta name="description" content="Celebrate progress and track your rank across every annotation skill in The Hive.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/public/favicon.ico">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="../hive-leaderboards.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="/src/assets/annota-logo.png" alt="Annota Logo">
+        <span class="hide-mobile">Annota</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/jobs.html">Jobs</a></li>
+        <li><a href="/hive.html" class="active">Hive</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+
+      <div class="nav-auth">
+        <a href="/auth.html" class="btn btn-ghost btn-sm">Sign In</a>
+        <a href="/auth.html" class="btn btn-default btn-sm">Sign Up</a>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <ul class="mobile-menu-links">
+      <li><a href="/jobs.html">Jobs</a></li>
+      <li><a href="/hive.html" class="active">Hive</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+
+    <div class="mobile-menu-auth">
+      <a href="/auth.html" class="btn btn-ghost btn-full">Sign In</a>
+      <a href="/auth.html" class="btn btn-default btn-full">Sign Up</a>
+    </div>
+  </div>
+
+  <!-- Header Section -->
+  <section class="leaderboard-header">
+    <div class="leaderboard-header-container">
+      <a href="/hive.html" class="back-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Back to The Hive
+      </a>
+
+      <div class="leaderboard-hero">
+        <h1>
+          The Hive <span class="gradient-text">Leaderboards</span>
+        </h1>
+        <p class="hero-subtitle">Celebrate progress. Track your rank across every skill.</p>
+        <p class="hero-description">
+          The Hive tracks performance across all practice modules. Earn XP, badges, and climb the charts by completing annotation challenges.
+        </p>
+
+        <!-- User Current Rank Card -->
+        <div class="user-rank-card card">
+          <div class="user-rank-info">
+            <div class="user-rank-avatar">YU</div>
+            <div class="user-rank-text">
+              <div class="user-rank-label">Your Global Rank</div>
+              <div class="user-rank-value">#42 · Level 4 Vision Apprentice</div>
+            </div>
+          </div>
+          <div class="user-rank-divider"></div>
+          <div class="user-rank-xp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <span>1,240 XP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters Section -->
+  <section class="leaderboard-filters">
+    <div class="filters-container">
+      <!-- Skill Filter -->
+      <div class="skill-tabs">
+        <button class="skill-tab active" data-skill="overall">🐝 Overall</button>
+        <button class="skill-tab" data-skill="image">🖼 Image</button>
+        <button class="skill-tab" data-skill="text">📝 Text</button>
+        <button class="skill-tab" data-skill="audio">🔊 Audio</button>
+        <button class="skill-tab" data-skill="video">🎥 Video</button>
+      </div>
+
+      <!-- Time Range Filter -->
+      <div class="time-tabs">
+        <button class="time-tab" data-time="week">This Week</button>
+        <button class="time-tab" data-time="month">This Month</button>
+        <button class="time-tab active" data-time="all-time">All-Time</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leaderboard Table -->
+  <section class="leaderboard-table-section">
+    <div class="table-container">
+      <div class="card table-card">
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Annotator</th>
+              <th>Category</th>
+              <th class="text-right">XP</th>
+              <th class="text-center">Badges</th>
+              <th class="text-right">Modules</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboard-tbody">
+            <!-- Rows will be inserted here by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="load-more-container">
+        <button class="btn btn-outline btn-lg">Load More →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- User Standing Panel -->
+  <section class="user-standing-section">
+    <div class="user-standing-container">
+      <div class="card user-standing-card">
+        <div class="user-standing-content">
+          <div class="user-standing-info">
+            <h3>Your Current Standing</h3>
+            <p>
+              You're currently <span class="highlight">#42 overall</span> with
+              <span class="highlight">1,240 XP</span>
+            </p>
+            <div class="user-standing-stats">
+              <div class="standing-stat">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+                <span>3 badges earned</span>
+              </div>
+              <div class="standing-divider"></div>
+              <div class="standing-stat">8 modules completed</div>
+            </div>
+          </div>
+          <a href="/account/hive.html" class="btn btn-default btn-lg">
+            View Your Hive Profile →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="leaderboard-cta-section">
+    <div class="leaderboard-cta-container">
+      <div class="leaderboard-cta-card">
+        <h2>Ready to climb higher?</h2>
+        <a href="/hive.html" class="btn btn-lg" style="background: var(--gradient-primary); color: var(--primary-foreground); border: none; box-shadow: var(--shadow-glow);">
+          Return to The Hive
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-logo">Annota</div>
+
+        <ul class="footer-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-copyright">
+        © 2025 Annota. Building the future of AI annotation.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../hive-leaderboards.js"></script>
+</body>
+</html>

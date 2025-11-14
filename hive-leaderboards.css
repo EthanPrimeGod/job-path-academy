@@ -1,0 +1,565 @@
+/*
+ * Hive Leaderboards Page Styles
+ * Full leaderboard table with rankings
+ */
+
+/* ===================================
+   HEADER SECTION
+   =================================== */
+.leaderboard-header {
+  padding: 8rem 1.5rem 4rem;
+}
+
+.leaderboard-header-container {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted-foreground);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  margin-bottom: 2rem;
+  font-size: 0.875rem;
+}
+
+.back-link:hover {
+  color: var(--foreground);
+}
+
+.back-link svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.leaderboard-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.leaderboard-hero h1 {
+  font-size: 3.75rem;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.leaderboard-hero .gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 500;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--muted-foreground);
+  margin-bottom: 1rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  max-width: 48rem;
+  margin: 0 auto 2rem;
+}
+
+/* User Current Rank Card */
+.user-rank-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+  background-color: hsla(220, 15%, 12%, 0.5);
+  backdrop-filter: blur(16px);
+}
+
+.user-rank-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.user-rank-avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-foreground);
+  font-weight: 500;
+}
+
+.user-rank-text {
+  text-align: left;
+}
+
+.user-rank-label {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.user-rank-value {
+  font-weight: 500;
+}
+
+.user-rank-divider {
+  width: 1px;
+  height: 2.5rem;
+  background-color: var(--border);
+}
+
+.user-rank-xp {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--primary);
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+/* ===================================
+   FILTERS SECTION
+   =================================== */
+.leaderboard-filters {
+  padding: 0 1.5rem 2rem;
+}
+
+.filters-container {
+  max-width: 1152px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .filters-container {
+    flex-direction: row;
+  }
+}
+
+/* Skill Tabs */
+.skill-tabs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+  background-color: var(--muted);
+  padding: 0.25rem;
+  border-radius: calc(var(--radius) - 4px);
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .skill-tabs {
+    width: auto;
+  }
+}
+
+.skill-tab {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  background: transparent;
+  color: var(--foreground);
+  border: none;
+  border-radius: calc(var(--radius) - 6px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.skill-tab:hover {
+  background-color: hsla(220, 15%, 18%, 0.5);
+}
+
+.skill-tab.active {
+  background-color: var(--background);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Time Tabs */
+.time-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  background-color: var(--muted);
+  padding: 0.25rem;
+  border-radius: calc(var(--radius) - 4px);
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .time-tabs {
+    width: auto;
+  }
+}
+
+.time-tab {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  background: transparent;
+  color: var(--foreground);
+  border: none;
+  border-radius: calc(var(--radius) - 6px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.time-tab:hover {
+  background-color: hsla(220, 15%, 18%, 0.5);
+}
+
+.time-tab.active {
+  background-color: var(--background);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* ===================================
+   LEADERBOARD TABLE
+   =================================== */
+.leaderboard-table-section {
+  padding: 0 1.5rem 4rem;
+}
+
+.table-container {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.table-card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard-table thead {
+  border-bottom: 1px solid var(--border);
+}
+
+.leaderboard-table th {
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  background-color: transparent;
+}
+
+.leaderboard-table th.text-right {
+  text-align: right;
+}
+
+.leaderboard-table th.text-center {
+  text-align: center;
+}
+
+.leaderboard-table tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.leaderboard-table tbody tr:hover {
+  background-color: hsla(220, 15%, 18%, 0.3);
+}
+
+.leaderboard-table tbody tr.top-3 {
+  background: linear-gradient(to right, hsla(45, 95%, 58%, 0.1), hsla(260, 60%, 65%, 0.1));
+  border-left: 2px solid var(--primary);
+}
+
+.leaderboard-table td {
+  padding: 1rem;
+}
+
+/* Rank Cell */
+.rank-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.trophy-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.trophy-gold {
+  color: #f59e0b;
+}
+
+.trophy-silver {
+  color: #94a3b8;
+}
+
+.trophy-bronze {
+  color: #92400e;
+}
+
+/* Annotator Cell */
+.annotator-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.annotator-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-foreground);
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.annotator-name {
+  font-weight: 500;
+}
+
+/* Category Cell */
+.category-badge {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: calc(var(--radius) - 4px);
+  border: 1px solid var(--border);
+  background-color: transparent;
+}
+
+/* XP Cell */
+.xp-cell {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.25rem;
+  color: var(--primary);
+}
+
+.xp-cell svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+.xp-value {
+  font-weight: 500;
+}
+
+/* Badges Cell */
+.badges-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.badges-cell svg {
+  width: 1rem;
+  height: 1rem;
+  color: var(--muted-foreground);
+}
+
+.badges-count {
+  font-size: 0.875rem;
+}
+
+/* Modules Cell */
+.modules-count {
+  text-align: right;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+/* Load More */
+.load-more-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* ===================================
+   USER STANDING SECTION
+   =================================== */
+.user-standing-section {
+  padding: 3rem 1.5rem;
+  background-color: hsla(220, 15%, 18%, 0.3);
+  border-top: 1px solid hsla(220, 15%, 20%, 0.5);
+  border-bottom: 1px solid hsla(220, 15%, 20%, 0.5);
+}
+
+.user-standing-container {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.user-standing-card {
+  padding: 2rem;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+}
+
+.user-standing-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .user-standing-content {
+    flex-direction: row;
+  }
+}
+
+.user-standing-info {
+  text-align: left;
+}
+
+.user-standing-info h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.user-standing-info p {
+  color: var(--muted-foreground);
+  margin-bottom: 1rem;
+}
+
+.user-standing-info .highlight {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.user-standing-stats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.standing-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.standing-stat svg {
+  color: var(--muted-foreground);
+}
+
+.standing-divider {
+  width: 1px;
+  height: 1rem;
+  background-color: var(--border);
+}
+
+/* ===================================
+   CTA SECTION
+   =================================== */
+.leaderboard-cta-section {
+  padding: 4rem 1.5rem;
+}
+
+.leaderboard-cta-container {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.leaderboard-cta-card {
+  padding: 3rem;
+  border-radius: 1.5rem;
+  background: var(--gradient-accent);
+  border: 1px solid hsla(220, 15%, 20%, 0.5);
+  box-shadow: var(--shadow-glow);
+  backdrop-filter: blur(16px);
+  text-align: center;
+}
+
+.leaderboard-cta-card h2 {
+  font-size: 2.25rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .leaderboard-cta-card h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* ===================================
+   RESPONSIVE
+   =================================== */
+@media (max-width: 768px) {
+  .leaderboard-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .user-rank-card {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .user-rank-divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .skill-tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .leaderboard-table {
+    font-size: 0.875rem;
+  }
+
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  /* Hide some columns on mobile */
+  .leaderboard-table th:nth-child(3),
+  .leaderboard-table td:nth-child(3),
+  .leaderboard-table th:nth-child(5),
+  .leaderboard-table td:nth-child(5) {
+    display: none;
+  }
+
+  .leaderboard-cta-card {
+    padding: 2rem;
+  }
+
+  .leaderboard-cta-card h2 {
+    font-size: 1.5rem;
+  }
+}
