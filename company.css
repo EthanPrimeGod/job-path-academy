@@ -1,0 +1,136 @@
+/*
+ * Company Dashboard Styles
+ * Company pages with sidebar navigation
+ */
+
+/* ===================================
+   COMPANY LAYOUT
+   =================================== */
+.company-layout {
+  display: flex;
+  min-height: calc(100vh - 4rem);
+}
+
+/* ===================================
+   COMPANY SIDEBAR
+   =================================== */
+.company-sidebar {
+  width: 16rem;
+  border-right: 1px solid hsla(220, 15%, 20%, 0.5);
+  background-color: hsla(220, 15%, 12%, 0.3);
+  padding: 1.5rem;
+}
+
+.sidebar-header {
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-header h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.sidebar-link {
+  padding: 0.625rem 0.75rem;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sidebar-link:hover {
+  background-color: hsla(220, 15%, 20%, 0.5);
+  color: var(--foreground);
+}
+
+.sidebar-link.active {
+  background-color: var(--muted);
+  color: var(--foreground);
+}
+
+/* ===================================
+   COMPANY MAIN CONTENT
+   =================================== */
+.company-main {
+  flex: 1;
+  padding: 1.5rem 2rem;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* ===================================
+   KPI CARDS
+   =================================== */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.kpi-card {
+  padding: 1.5rem;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.kpi-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.kpi-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+}
+
+.kpi-value {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.kpi-detail {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+/* ===================================
+   RESPONSIVE
+   =================================== */
+@media (max-width: 768px) {
+  .company-sidebar {
+    display: none;
+  }
+
+  .company-main {
+    padding: 1rem;
+  }
+
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+}

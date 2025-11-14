@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Company Dashboard - Annota</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="company.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="/src/assets/annota-logo.png" alt="Annota Logo">
+        <span>Annota</span>
+      </a>
+      <div class="nav-auth">
+        <a href="/auth.html" class="btn btn-ghost btn-sm">Sign Out</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="company-layout">
+    <aside class="company-sidebar">
+      <div class="sidebar-header">
+        <h2>Company Dashboard</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="/company-overview.html" class="sidebar-link active">Overview</a>
+        <a href="#" class="sidebar-link">Jobs</a>
+        <a href="#" class="sidebar-link">Applicants</a>
+        <a href="#" class="sidebar-link">Messages</a>
+        <a href="#" class="sidebar-link">Modules</a>
+        <a href="#" class="sidebar-link">Billing</a>
+        <a href="#" class="sidebar-link">Team</a>
+        <a href="#" class="sidebar-link">Settings</a>
+      </nav>
+    </aside>
+
+    <main class="company-main">
+      <div class="page-header">
+        <h1>Company Dashboard</h1>
+        <p class="page-subtitle">Welcome back! Here's what's happening.</p>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card card">
+          <div class="kpi-header">
+            <span class="kpi-label">Open Jobs</span>
+          </div>
+          <div class="kpi-value">12</div>
+          <div class="kpi-detail">3 posted this week</div>
+        </div>
+
+        <div class="kpi-card card">
+          <div class="kpi-header">
+            <span class="kpi-label">Applicants in Review</span>
+          </div>
+          <div class="kpi-value">42</div>
+          <div class="kpi-detail">18 new this week</div>
+        </div>
+
+        <div class="kpi-card card">
+          <div class="kpi-header">
+            <span class="kpi-label">Unread Messages</span>
+          </div>
+          <div class="kpi-value">7</div>
+          <div class="kpi-detail">From 5 candidates</div>
+        </div>
+
+        <div class="kpi-card card">
+          <div class="kpi-header">
+            <span class="kpi-label">Active Modules</span>
+          </div>
+          <div class="kpi-value">8</div>
+          <div class="kpi-detail">456 total attempts</div>
+        </div>
+      </div>
+
+      <div class="empty-state card">
+        <h3>Company Dashboard</h3>
+        <p>Full company dashboard features coming soon. Manage jobs, applicants, and modules from here.</p>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-copyright">© 2025 Annota. Building the future of AI annotation.</div>
+    </div>
+  </footer>
+</body>
+</html>
