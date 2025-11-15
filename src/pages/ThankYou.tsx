@@ -18,7 +18,7 @@ export default function ThankYou() {
             <div className="relative">
               <Hexagon className="w-24 h-24 text-primary animate-pulse" strokeWidth={1.5} />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-12 h-12 bg-gradient-primary rounded-full opacity-60 blur-xl" />
+                <div className="w-8 h-8 bg-gradient-primary rounded-full opacity-30 blur-lg" />
               </div>
             </div>
           </div>
@@ -39,9 +39,7 @@ export default function ThankYou() {
         <div className="max-w-3xl mx-auto text-center bg-background/60 backdrop-blur-sm rounded-2xl p-12">
           <p className="text-lg md:text-xl text-foreground/90 leading-relaxed">
             Thank you to everyone who signed up and supported Annota so far. 
-            We're building something <span className="text-primary font-medium">bigger</span>, 
-            <span className="text-primary font-medium">sharper</span>, and 
-            <span className="text-primary font-medium">more powerful</span> — and we can't wait to have you 
+            We're building something <span className="text-primary font-medium">bigger</span>, <span className="text-primary font-medium">sharper</span>, and <span className="text-primary font-medium">more powerful</span> — and we can't wait to have you 
             with us for the next chapter.
           </p>
         </div>
