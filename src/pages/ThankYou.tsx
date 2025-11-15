@@ -10,7 +10,7 @@ export default function ThankYou() {
             <div className="relative">
               <Hexagon className="w-24 h-24 text-primary relative z-10" strokeWidth={1.5} />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-24 h-24 bg-gradient-primary rounded-full opacity-15 blur-xl animate-pulse" style={{ animationDuration: '3s' }} />
+                <div className="w-24 h-24 bg-primary rounded-full opacity-15 blur-xl animate-pulse" style={{ animationDuration: '3s' }} />
               </div>
             </div>
           </div>
