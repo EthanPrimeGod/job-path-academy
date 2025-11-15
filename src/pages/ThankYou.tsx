@@ -7,7 +7,7 @@ export default function ThankYou() {
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         
         {/* Gradient backdrop */}
-        <div className="absolute inset-0 bg-gradient-accent opacity-30 animate-pulse" style={{ animationDuration: '4s' }} />
+        <div className="absolute inset-0 bg-gradient-accent opacity-5 animate-pulse" style={{ animationDuration: '4s' }} />
         
         {/* Animated shimmer overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent animate-[slide-in-right_3s_ease-in-out_infinite]" />
@@ -36,7 +36,7 @@ export default function ThankYou() {
 
       {/* Message Section */}
       <section className="py-20 px-6 relative">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-center bg-background/60 backdrop-blur-sm rounded-2xl p-12">
           <p className="text-lg md:text-xl text-foreground/90 leading-relaxed">
             Thank you to everyone who signed up and supported Annota so far. 
             We're building something <span className="text-primary font-medium">bigger</span>, 
