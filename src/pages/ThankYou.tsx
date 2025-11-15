@@ -41,17 +41,6 @@ export default function ThankYou() {
           </p>
         </div>
       </section>
-
-      {/* Message Section */}
-      <section className="py-20 px-6 relative">
-        <div className="max-w-3xl mx-auto text-center bg-background/60 backdrop-blur-sm rounded-2xl p-12">
-          <p className="text-lg md:text-xl text-foreground/90 leading-relaxed">
-            Thank you to everyone who signed up and supported Annota so far. 
-            We're building something <span className="text-primary font-medium">bigger</span>, <span className="text-primary font-medium">sharper</span>, and <span className="text-primary font-medium">more powerful</span> — and we can't wait to have you 
-            with us for the next chapter.
-          </p>
-        </div>
-      </section>
     </div>
   );
 }
