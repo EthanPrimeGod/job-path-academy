@@ -5,22 +5,9 @@ export default function ThankYou() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
-        
-        {/* Gradient backdrop */}
-        <div className="absolute inset-0 bg-gradient-accent opacity-5 animate-pulse" style={{ animationDuration: '4s' }} />
-        
-        {/* Animated shimmer overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent animate-[slide-in-right_3s_ease-in-out_infinite]" />
-
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          {/* Abstract bee/hive icon */}
           <div className="mb-8 flex justify-center">
-            <div className="relative">
-              <Hexagon className="w-24 h-24 text-primary animate-pulse" strokeWidth={1.5} />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-8 h-8 bg-gradient-primary rounded-full opacity-30 blur-lg" />
-              </div>
-            </div>
+            <Hexagon className="w-24 h-24 text-primary" strokeWidth={1.5} />
           </div>
 
           <h1 className="text-6xl md:text-8xl font-light tracking-tight mb-6">
