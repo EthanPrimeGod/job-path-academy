@@ -4,7 +4,7 @@ export default function ThankYou() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <div className="mb-8 flex justify-center">
             <div className="relative">
