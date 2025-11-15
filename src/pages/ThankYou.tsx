@@ -8,9 +8,25 @@ export default function ThankYou() {
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <div className="mb-8 flex justify-center">
             <div className="relative">
-              <Hexagon className="w-24 h-24 text-primary relative z-10" strokeWidth={1.5} />
+              <svg className="w-24 h-24 relative z-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="hexagonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="hsl(45 95% 58%)" />
+                    <stop offset="100%" stopColor="hsl(260 60% 65%)" />
+                  </linearGradient>
+                </defs>
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" 
+                      stroke="url(#hexagonGradient)" 
+                      strokeWidth="1.5" 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round"/>
+              </svg>
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-24 h-24 bg-primary rounded-full opacity-15 blur-xl animate-pulse" style={{ animationDuration: '3s' }} />
+                <div className="w-24 h-24 rounded-full opacity-20 blur-xl animate-pulse" 
+                     style={{ 
+                       background: 'linear-gradient(135deg, hsl(45 95% 58%), hsl(260 60% 65%))',
+                       animationDuration: '3s' 
+                     }} />
               </div>
             </div>
           </div>
