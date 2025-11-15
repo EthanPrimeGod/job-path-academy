@@ -7,7 +7,12 @@ export default function ThankYou() {
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <div className="mb-8 flex justify-center">
-            <Hexagon className="w-24 h-24 text-primary" strokeWidth={1.5} />
+            <div className="relative">
+              <Hexagon className="w-24 h-24 text-primary relative z-10" strokeWidth={1.5} />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-16 h-16 bg-gradient-primary rounded-full opacity-15 blur-xl animate-pulse" style={{ animationDuration: '3s' }} />
+              </div>
+            </div>
           </div>
 
           <h1 className="text-6xl md:text-8xl font-light tracking-tight mb-6">
