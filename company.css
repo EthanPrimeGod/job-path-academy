@@ -119,6 +119,151 @@
 }
 
 /* ===================================
+   PAGE HEADER WITH BUTTON
+   =================================== */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ===================================
+   FILTERS CARD
+   =================================== */
+.filters-card {
+  padding: 1rem;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 1.5rem;
+}
+
+.filters-card .search-bar {
+  margin-bottom: 1rem;
+}
+
+.filters-card .status-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* ===================================
+   COMPANY TABLE
+   =================================== */
+.company-table {
+  padding: 0;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.company-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.company-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  border-bottom: 1px solid var(--border);
+}
+
+.company-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.company-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.company-table tbody tr:hover {
+  background-color: hsla(220, 15%, 15%, 0.3);
+}
+
+/* ===================================
+   MODULES GRID
+   =================================== */
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.module-card {
+  padding: 1.5rem;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: all 0.2s ease;
+}
+
+.module-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.module-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.module-icon {
+  padding: 0.5rem;
+  background-color: var(--muted);
+  border-radius: var(--radius);
+}
+
+.module-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.module-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.module-card p {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.module-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.module-stat-label {
+  color: var(--muted-foreground);
+  margin-bottom: 0.25rem;
+}
+
+.module-stat-value {
+  font-weight: 500;
+}
+
+.module-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* ===================================
    RESPONSIVE
    =================================== */
 @media (max-width: 768px) {
@@ -132,5 +277,17 @@
 
   .kpi-grid {
     grid-template-columns: 1fr;
+  }
+
+  .page-header {
+    flex-direction: column;
+  }
+
+  .modules-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .company-table {
+    overflow-x: auto;
   }
 }
